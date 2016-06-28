@@ -268,35 +268,87 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LbP-hw-Idt" customClass="RoundedButton" customModule="BalloonGame" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="560" height="63"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="42"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="T8d-2T-0mG">
+                                                <variation key="heightClass=regular-widthClass=regular" constant="72"/>
+                                            </constraint>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <state key="normal" title="Basic">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="T8d-2T-0mG"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" type="system" pointSize="42"/>
+                                            <mask key="constraints">
+                                                <include reference="T8d-2T-0mG"/>
+                                            </mask>
+                                        </variation>
                                         <connections>
                                             <action selector="buttonBasicPressed:" destination="yCg-Ce-g5n" eventType="touchUpInside" id="ncI-2L-vkE"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oug-Ig-Tvu" customClass="RoundedButton" customModule="BalloonGame" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="93" width="560" height="63"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="42"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="Hev-YS-zMH">
+                                                <variation key="heightClass=regular-widthClass=regular" constant="72"/>
+                                            </constraint>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <state key="normal" title="Colors">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="Hev-YS-zMH"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" type="system" pointSize="42"/>
+                                            <mask key="constraints">
+                                                <include reference="Hev-YS-zMH"/>
+                                            </mask>
+                                        </variation>
                                         <connections>
                                             <action selector="buttonColorsPressed:" destination="yCg-Ce-g5n" eventType="touchUpInside" id="RY6-j4-31b"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g0A-NR-vWB" customClass="RoundedButton" customModule="BalloonGame" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="186" width="560" height="63"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="42"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="iUY-nD-8WE">
+                                                <variation key="heightClass=regular-widthClass=regular" constant="72"/>
+                                            </constraint>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <state key="normal" title="Letters">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="iUY-nD-8WE"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
+                                            <fontDescription key="fontDescription" type="system" pointSize="42"/>
+                                            <rect key="frame" x="0.0" y="204" width="760" height="72"/>
+                                            <mask key="constraints">
+                                                <include reference="iUY-nD-8WE"/>
+                                            </mask>
+                                        </variation>
                                         <connections>
                                             <action selector="buttonLettersPressed:" destination="yCg-Ce-g5n" eventType="touchUpInside" id="hbi-1f-Mla"/>
                                         </connections>
                                     </button>
                                 </subviews>
+                                <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
+                                    <rect key="frame" x="20" y="276" width="760" height="276"/>
+                                </variation>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
