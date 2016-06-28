@@ -573,9 +573,12 @@
                                                     <rect key="frame" x="100" y="0.0" width="485" height="80"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
+                                                    <variation key="heightClass=regular-widthClass=regular">
+                                                        <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                                    </variation>
                                                 </label>
                                                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="menuGameLined" id="mju-WK-fDT">
                                                     <rect key="frame" x="15" y="5" width="70" height="70"/>
@@ -596,9 +599,12 @@
                                                     <rect key="frame" x="110" y="0.0" width="475" height="80"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
+                                                    <variation key="heightClass=regular-widthClass=regular">
+                                                        <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                                    </variation>
                                                 </label>
                                                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="menuUserLined" id="ZiB-X6-7zO">
                                                     <rect key="frame" x="15" y="0.0" width="80" height="80"/>
@@ -619,9 +625,12 @@
                                                     <rect key="frame" x="110" y="0.0" width="475" height="80"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
+                                                    <variation key="heightClass=regular-widthClass=regular">
+                                                        <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                                    </variation>
                                                 </label>
                                                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="menuStatisticsLined" id="vbs-IC-ffD">
                                                     <rect key="frame" x="15" y="0.0" width="80" height="80"/>
