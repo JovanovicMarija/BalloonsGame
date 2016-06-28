@@ -104,7 +104,7 @@ class RecordWordViewController: UIViewController, AVAudioRecorderDelegate {
             audioRecorder.delegate = self
             audioRecorder.record()
             
-            buttonRecord.setTitle("Tap to Stop", forState: .Normal)
+            buttonRecord.setTitle(NSLocalizedString("TapToStop", comment: "Tap to Stop"), forState: .Normal)
         } catch {
             finishRecording(success: false)
         }
@@ -115,9 +115,9 @@ class RecordWordViewController: UIViewController, AVAudioRecorderDelegate {
         audioRecorder = nil
         
         if success {
-            buttonRecord.setTitle("Tap to Re-record", forState: .Normal)
+            buttonRecord.setTitle(NSLocalizedString("TapToRe-record", comment: "Tap to Re-record"), forState: .Normal)
         } else {
-            buttonRecord.setTitle("Tap to Record", forState: .Normal)
+            buttonRecord.setTitle(NSLocalizedString("TapToRecord", comment: "Tap to Record"), forState: .Normal)
             // recording failed :(
         }
     }

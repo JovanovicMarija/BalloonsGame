@@ -1,0 +1,15 @@
+/* 
+  Localizable.strings
+  BalloonGame
+
+  Created by Marija Jovanovic on 6/28/16.
+  Copyright © 2016 Marija Jovanovic. All rights reserved.
+*/
+
+TapToStop = "Zaustavi";
+
+TapToRe-record = "Ponovi snimanje";
+
+TapToRecord = "Započni snimanje";
+
+AddUser = "Dodaj korisnika";

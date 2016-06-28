@@ -62,7 +62,7 @@ class WelcomeViewController: UIViewController {
         if let name = Manager.sharedInstance.currentUser?.name {
             labelUserName.text = name
         } else {
-            buttonChooseAnotherPlayer.setTitle("Add User", forState: .Normal)
+            buttonChooseAnotherPlayer.setTitle(NSLocalizedString("AddUser", comment: "Add User"), forState: .Normal)
         }
     }
     

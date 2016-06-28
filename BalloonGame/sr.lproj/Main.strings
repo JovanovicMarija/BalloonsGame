@@ -1,12 +1,12 @@
 
 /* Class = "UIButton"; normalTitle = "Record"; ObjectID = "0Jy-Au-8A3"; */
-"0Jy-Au-8A3.normalTitle" = "Record";
+"0Jy-Au-8A3.normalTitle" = "Snimi";
 
 /* Class = "UIButton"; normalTitle = "Finish & Play"; ObjectID = "3ya-wk-bVL"; */
-"3ya-wk-bVL.normalTitle" = "Finish & Play";
+"3ya-wk-bVL.normalTitle" = "Završi & Igraj";
 
 /* Class = "UIButton"; normalTitle = "Create New User"; ObjectID = "4uT-Tt-WwR"; */
-"4uT-Tt-WwR.normalTitle" = "Create New User";
+"4uT-Tt-WwR.normalTitle" = "Napravi novog korisnika";
 
 /* Class = "UILabel"; text = "7 points"; ObjectID = "8JR-In-UMA"; */
 "8JR-In-UMA.text" = "7 points";
@@ -15,58 +15,58 @@
 "8Mv-hl-iWr.text" = "Label";
 
 /* Class = "UILabel"; text = "Statistics"; ObjectID = "AWg-Va-OSJ"; */
-"AWg-Va-OSJ.text" = "Statistics";
+"AWg-Va-OSJ.text" = "Statistika";
 
 /* Class = "UILabel"; text = "Users"; ObjectID = "ESs-C5-sMa"; */
-"ESs-C5-sMa.text" = "Users";
+"ESs-C5-sMa.text" = "Korisnici";
 
 /* Class = "UIButton"; normalTitle = "Basic"; ObjectID = "LbP-hw-Idt"; */
-"LbP-hw-Idt.normalTitle" = "Basic";
+"LbP-hw-Idt.normalTitle" = "Osnovna igra";
 
 /* Class = "UILabel"; text = "Click on Add User to create first user and"; ObjectID = "Lev-g0-Km8"; */
-"Lev-g0-Km8.text" = "Click on Add User to create first user and";
+"Lev-g0-Km8.text" = "Kliknite na Dodaj korisnika kako biste naprvili prvog korisnika i";
 
 /* Class = "UILabel"; text = "Label"; ObjectID = "Lr1-XQ-ojQ"; */
 "Lr1-XQ-ojQ.text" = "Label";
 
 /* Class = "UILabel"; text = "start playing the game!"; ObjectID = "MDO-60-IdC"; */
-"MDO-60-IdC.text" = "start playing the game!";
+"MDO-60-IdC.text" = "počnite da igrate igre!";
 
 /* Class = "UILabel"; text = "Label"; ObjectID = "OfN-l3-Yoy"; */
 "OfN-l3-Yoy.text" = "Label";
 
 /* Class = "UIBarButtonItem"; title = "Cancel"; ObjectID = "Sqn-ju-KJx"; */
-"Sqn-ju-KJx.title" = "Cancel";
+"Sqn-ju-KJx.title" = "Odustani";
 
 /* Class = "UILabel"; text = "Welcome back,"; ObjectID = "Tdd-Lk-quD"; */
-"Tdd-Lk-quD.text" = "Welcome back,";
+"Tdd-Lk-quD.text" = "Dobrodošli nazad,";
 
 /* Class = "UILabel"; text = "There are no users. Why don't you create one?"; ObjectID = "WdF-cc-lmF"; */
-"WdF-cc-lmF.text" = "There are no users. Why don't you create one?";
+"WdF-cc-lmF.text" = "Ne postoji ni jedan korisnik. Zašto ne biste napravili prvog?";
 
 /* Class = "UILabel"; text = "20 p"; ObjectID = "d6v-3K-uvH"; */
 "d6v-3K-uvH.text" = "20 p";
 
 /* Class = "UILabel"; text = "Welcome!"; ObjectID = "fyr-du-rSa"; */
-"fyr-du-rSa.text" = "Welcome!";
+"fyr-du-rSa.text" = "Dobrodošli!";
 
 /* Class = "UIButton"; normalTitle = "Letters"; ObjectID = "g0A-NR-vWB"; */
-"g0A-NR-vWB.normalTitle" = "Letters";
+"g0A-NR-vWB.normalTitle" = "Igra sa slovima";
 
 /* Class = "UIButton"; normalTitle = "New Game"; ObjectID = "hXF-d4-LfI"; */
-"hXF-d4-LfI.normalTitle" = "New Game";
+"hXF-d4-LfI.normalTitle" = "Nova igra";
 
 /* Class = "UILabel"; text = "Label"; ObjectID = "j5m-vD-sJo"; */
 "j5m-vD-sJo.text" = "Label";
 
 /* Class = "UIButton"; normalTitle = "Play"; ObjectID = "jIP-CU-DkM"; */
-"jIP-CU-DkM.normalTitle" = "Play";
+"jIP-CU-DkM.normalTitle" = "Igraj";
 
 /* Class = "UIButton"; normalTitle = "Colors"; ObjectID = "oug-Ig-Tvu"; */
-"oug-Ig-Tvu.normalTitle" = "Colors";
+"oug-Ig-Tvu.normalTitle" = "Igra sa bojama";
 
 /* Class = "UIButton"; normalTitle = "Choose another player"; ObjectID = "qti-Tz-4yh"; */
-"qti-Tz-4yh.normalTitle" = "Choose another player";
+"qti-Tz-4yh.normalTitle" = "Izaberi drugog igrača";
 
 /* Class = "UILabel"; text = "Games"; ObjectID = "uCf-CI-YZy"; */
-"uCf-CI-YZy.text" = "Games";
+"uCf-CI-YZy.text" = "Igre";
