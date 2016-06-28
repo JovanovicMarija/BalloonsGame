@@ -26,7 +26,6 @@ class AllChildrenViewController: UIViewController {
             labelNoUsers.hidden = true
             
             labelNoUsers.textColor = UIColor.mainColor()
-            labelNoUsers.font = UIFont.boldSystemFontOfSize(32)
         }
     }
     
