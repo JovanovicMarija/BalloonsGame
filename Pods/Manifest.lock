@@ -1,0 +1,15 @@
+PODS:
+  - FSCalendar (2.1.1)
+  - RESideMenu (4.0.7)
+
+DEPENDENCIES:
+  - FSCalendar
+  - RESideMenu (~> 4.0.7)
+
+SPEC CHECKSUMS:
+  FSCalendar: 04dc531f06fbde8a8e5b7394e9d4edebd45a591f
+  RESideMenu: f24c508404b49c667344c54aba7e590883533958
+
+PODFILE CHECKSUM: 26529968d34a19117b22e3560f3fe8d164f3f8ff
+
+COCOAPODS: 1.0.0
