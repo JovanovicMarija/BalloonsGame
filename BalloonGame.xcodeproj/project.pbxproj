@@ -12,7 +12,6 @@
 		8573DFE11D227B2E00DF2C1F /* BalloonGame.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8573DF721D227B2E00DF2C1F /* BalloonGame.xcdatamodeld */; };
 		8573DFE21D227B2E00DF2C1F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8573DF751D227B2E00DF2C1F /* LaunchScreen.storyboard */; };
 		8573DFE31D227B2E00DF2C1F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8573DF771D227B2E00DF2C1F /* Main.storyboard */; };
-		8573DFE41D227B2E00DF2C1F /* Statistics.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8573DF791D227B2E00DF2C1F /* Statistics.storyboard */; };
 		8573DFE51D227B2E00DF2C1F /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8573DF7C1D227B2E00DF2C1F /* Extensions.swift */; };
 		8573DFE61D227B2E00DF2C1F /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8573DF7E1D227B2E00DF2C1F /* Game.swift */; };
 		8573DFE71D227B2E00DF2C1F /* GameBasic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8573DF7F1D227B2E00DF2C1F /* GameBasic.swift */; };
@@ -45,9 +44,7 @@
 		8573E0021D227B2E00DF2C1F /* error.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8573DFA01D227B2E00DF2C1F /* error.mp3 */; };
 		8573E0031D227B2E00DF2C1F /* gameSong1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8573DFA11D227B2E00DF2C1F /* gameSong1.mp3 */; };
 		8573E0041D227B2E00DF2C1F /* gameSong2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8573DFA21D227B2E00DF2C1F /* gameSong2.mp3 */; };
-		8573E0051D227B2E00DF2C1F /* LaunchScreen.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8573DFA41D227B2E00DF2C1F /* LaunchScreen.strings */; };
 		8573E0061D227B2E00DF2C1F /* Main.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8573DFA61D227B2E00DF2C1F /* Main.strings */; };
-		8573E0071D227B2E00DF2C1F /* Statistics.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8573DFA81D227B2E00DF2C1F /* Statistics.strings */; };
 		8573E0081D227B2E00DF2C1F /* a.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 8573DFAB1D227B2E00DF2C1F /* a.m4a */; };
 		8573E0091D227B2E00DF2C1F /* b.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 8573DFAC1D227B2E00DF2C1F /* b.m4a */; };
 		8573E00A1D227B2E00DF2C1F /* c.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 8573DFAD1D227B2E00DF2C1F /* c.m4a */; };
@@ -100,6 +97,7 @@
 		8573E0391D227B2E00DF2C1F /* xylophone.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 8573DFDD1D227B2E00DF2C1F /* xylophone.m4a */; };
 		8573E03A1D227B2E00DF2C1F /* yellow.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 8573DFDE1D227B2E00DF2C1F /* yellow.m4a */; };
 		8573E03B1D227B2E00DF2C1F /* zebra.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 8573DFDF1D227B2E00DF2C1F /* zebra.m4a */; };
+		85BB769B1D2282A200083AD0 /* Statistics.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85BB769D1D2282A200083AD0 /* Statistics.storyboard */; };
 		85CAFDE11D2270730016BBE2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85CAFDE01D2270730016BBE2 /* AppDelegate.swift */; };
 		85CAFDE61D2270730016BBE2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85CAFDE41D2270730016BBE2 /* Main.storyboard */; };
 		85CAFDE91D2270730016BBE2 /* BalloonGame.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 85CAFDE71D2270730016BBE2 /* BalloonGame.xcdatamodeld */; };
@@ -114,7 +112,6 @@
 		8573DF731D227B2E00DF2C1F /* BalloonGame.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BalloonGame.xcdatamodel; sourceTree = "<group>"; };
 		8573DF761D227B2E00DF2C1F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8573DF781D227B2E00DF2C1F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main.storyboard; sourceTree = "<group>"; };
-		8573DF7A1D227B2E00DF2C1F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Statistics.storyboard; sourceTree = "<group>"; };
 		8573DF7C1D227B2E00DF2C1F /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		8573DF7E1D227B2E00DF2C1F /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		8573DF7F1D227B2E00DF2C1F /* GameBasic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameBasic.swift; sourceTree = "<group>"; };
@@ -147,9 +144,7 @@
 		8573DFA01D227B2E00DF2C1F /* error.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = error.mp3; sourceTree = "<group>"; };
 		8573DFA11D227B2E00DF2C1F /* gameSong1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = gameSong1.mp3; sourceTree = "<group>"; };
 		8573DFA21D227B2E00DF2C1F /* gameSong2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = gameSong2.mp3; sourceTree = "<group>"; };
-		8573DFA51D227B2E00DF2C1F /* sr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sr; path = LaunchScreen.strings; sourceTree = "<group>"; };
 		8573DFA71D227B2E00DF2C1F /* sr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sr; path = Main.strings; sourceTree = "<group>"; };
-		8573DFA91D227B2E00DF2C1F /* sr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sr; path = Statistics.strings; sourceTree = "<group>"; };
 		8573DFAB1D227B2E00DF2C1F /* a.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = a.m4a; sourceTree = "<group>"; };
 		8573DFAC1D227B2E00DF2C1F /* b.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = b.m4a; sourceTree = "<group>"; };
 		8573DFAD1D227B2E00DF2C1F /* c.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = c.m4a; sourceTree = "<group>"; };
@@ -202,6 +197,9 @@
 		8573DFDD1D227B2E00DF2C1F /* xylophone.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = xylophone.m4a; sourceTree = "<group>"; };
 		8573DFDE1D227B2E00DF2C1F /* yellow.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = yellow.m4a; sourceTree = "<group>"; };
 		8573DFDF1D227B2E00DF2C1F /* zebra.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = zebra.m4a; sourceTree = "<group>"; };
+		85BB76951D22817800083AD0 /* sr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sr; path = sr.lproj/Main.strings; sourceTree = "<group>"; };
+		85BB769C1D2282A200083AD0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Statistics.storyboard; sourceTree = "<group>"; };
+		85BB769F1D2282AA00083AD0 /* sr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sr; path = sr.lproj/Statistics.strings; sourceTree = "<group>"; };
 		85CAFDDD1D2270720016BBE2 /* BalloonGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BalloonGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85CAFDE01D2270730016BBE2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		85CAFDE51D2270730016BBE2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -209,8 +207,6 @@
 		85CAFDEA1D2270730016BBE2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		85CAFDED1D2270730016BBE2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		85CAFDEF1D2270730016BBE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		85CAFDF51D2272070016BBE2 /* sr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sr; path = sr.lproj/Main.strings; sourceTree = "<group>"; };
-		85CAFDF61D2272070016BBE2 /* sr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sr; path = sr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		A8DEF9CA226F468849856C9F /* Pods-BalloonGame.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BalloonGame.release.xcconfig"; path = "Pods/Target Support Files/Pods-BalloonGame/Pods-BalloonGame.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -240,7 +236,6 @@
 			children = (
 				8573DF751D227B2E00DF2C1F /* LaunchScreen.storyboard */,
 				8573DF771D227B2E00DF2C1F /* Main.storyboard */,
-				8573DF791D227B2E00DF2C1F /* Statistics.storyboard */,
 			);
 			path = Base.lproj;
 			sourceTree = "<group>";
@@ -339,9 +334,7 @@
 		8573DFA31D227B2E00DF2C1F /* sr.lproj */ = {
 			isa = PBXGroup;
 			children = (
-				8573DFA41D227B2E00DF2C1F /* LaunchScreen.strings */,
 				8573DFA61D227B2E00DF2C1F /* Main.strings */,
-				8573DFA81D227B2E00DF2C1F /* Statistics.strings */,
 			);
 			path = sr.lproj;
 			sourceTree = "<group>";
@@ -450,6 +443,7 @@
 				85CAFDEC1D2270730016BBE2 /* LaunchScreen.storyboard */,
 				85CAFDEF1D2270730016BBE2 /* Info.plist */,
 				85CAFDE71D2270730016BBE2 /* BalloonGame.xcdatamodeld */,
+				85BB769D1D2282A200083AD0 /* Statistics.storyboard */,
 			);
 			path = BalloonGame;
 			sourceTree = "<group>";
@@ -539,9 +533,9 @@
 				8573E02B1D227B2E00DF2C1F /* jump.m4a in Resources */,
 				8573E03B1D227B2E00DF2C1F /* zebra.m4a in Resources */,
 				8573E0181D227B2E00DF2C1F /* q.m4a in Resources */,
-				8573E0051D227B2E00DF2C1F /* LaunchScreen.strings in Resources */,
 				8573E0361D227B2E00DF2C1F /* umbrella.m4a in Resources */,
 				8573E0151D227B2E00DF2C1F /* n.m4a in Resources */,
+				85BB769B1D2282A200083AD0 /* Statistics.storyboard in Resources */,
 				8573E0351D227B2E00DF2C1F /* tin.m4a in Resources */,
 				8573E0101D227B2E00DF2C1F /* i.m4a in Resources */,
 				8573E00F1D227B2E00DF2C1F /* h.m4a in Resources */,
@@ -580,11 +574,9 @@
 				8573E0301D227B2E00DF2C1F /* onion.m4a in Resources */,
 				8573E0311D227B2E00DF2C1F /* pig.m4a in Resources */,
 				8573E0131D227B2E00DF2C1F /* l.m4a in Resources */,
-				8573DFE41D227B2E00DF2C1F /* Statistics.storyboard in Resources */,
 				8573E0061D227B2E00DF2C1F /* Main.strings in Resources */,
 				8573E0031D227B2E00DF2C1F /* gameSong1.mp3 in Resources */,
 				8573E0091D227B2E00DF2C1F /* b.m4a in Resources */,
-				8573E0071D227B2E00DF2C1F /* Statistics.strings in Resources */,
 				8573E00D1D227B2E00DF2C1F /* f.m4a in Resources */,
 				8573E02A1D227B2E00DF2C1F /* ice.m4a in Resources */,
 				8573E00C1D227B2E00DF2C1F /* e.m4a in Resources */,
@@ -701,22 +693,6 @@
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		8573DF791D227B2E00DF2C1F /* Statistics.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8573DF7A1D227B2E00DF2C1F /* Base */,
-			);
-			name = Statistics.storyboard;
-			sourceTree = "<group>";
-		};
-		8573DFA41D227B2E00DF2C1F /* LaunchScreen.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8573DFA51D227B2E00DF2C1F /* sr */,
-			);
-			name = LaunchScreen.strings;
-			sourceTree = "<group>";
-		};
 		8573DFA61D227B2E00DF2C1F /* Main.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -725,19 +701,20 @@
 			name = Main.strings;
 			sourceTree = "<group>";
 		};
-		8573DFA81D227B2E00DF2C1F /* Statistics.strings */ = {
+		85BB769D1D2282A200083AD0 /* Statistics.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				8573DFA91D227B2E00DF2C1F /* sr */,
+				85BB769C1D2282A200083AD0 /* Base */,
+				85BB769F1D2282AA00083AD0 /* sr */,
 			);
-			name = Statistics.strings;
+			name = Statistics.storyboard;
 			sourceTree = "<group>";
 		};
 		85CAFDE41D2270730016BBE2 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				85CAFDE51D2270730016BBE2 /* Base */,
-				85CAFDF51D2272070016BBE2 /* sr */,
+				85BB76951D22817800083AD0 /* sr */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -746,7 +723,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				85CAFDED1D2270730016BBE2 /* Base */,
-				85CAFDF61D2272070016BBE2 /* sr */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";

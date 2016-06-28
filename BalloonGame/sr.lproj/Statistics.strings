@@ -1,1 +1,45 @@
 
+/* Class = "UILabel"; text = "Best Score"; ObjectID = "0mO-up-RlP"; */
+"0mO-up-RlP.text" = "Best Score";
+
+/* Class = "UISegmentedControl"; 4Kp-1V-ooG.segmentTitles[0] = "Starting Time"; ObjectID = "4Kp-1V-ooG"; */
+"4Kp-1V-ooG.segmentTitles[0]" = "Starting Time";
+
+/* Class = "UISegmentedControl"; 4Kp-1V-ooG.segmentTitles[1] = "Duration"; ObjectID = "4Kp-1V-ooG"; */
+"4Kp-1V-ooG.segmentTitles[1]" = "Duration";
+
+/* Class = "UISegmentedControl"; 4Kp-1V-ooG.segmentTitles[2] = "Points"; ObjectID = "4Kp-1V-ooG"; */
+"4Kp-1V-ooG.segmentTitles[2]" = "Points";
+
+/* Class = "UISegmentedControl"; AZd-OH-hHE.segmentTitles[0] = "Basic"; ObjectID = "AZd-OH-hHE"; */
+"AZd-OH-hHE.segmentTitles[0]" = "Basic";
+
+/* Class = "UISegmentedControl"; AZd-OH-hHE.segmentTitles[1] = "Colors"; ObjectID = "AZd-OH-hHE"; */
+"AZd-OH-hHE.segmentTitles[1]" = "Colors";
+
+/* Class = "UISegmentedControl"; AZd-OH-hHE.segmentTitles[2] = "Letters"; ObjectID = "AZd-OH-hHE"; */
+"AZd-OH-hHE.segmentTitles[2]" = "Letters";
+
+/* Class = "UISegmentedControl"; AZd-OH-hHE.segmentTitles[3] = "All"; ObjectID = "AZd-OH-hHE"; */
+"AZd-OH-hHE.segmentTitles[3]" = "All";
+
+/* Class = "UILabel"; text = "Total Games Played"; ObjectID = "VEb-ur-y5l"; */
+"VEb-ur-y5l.text" = "Total Games Played";
+
+/* Class = "UILabel"; text = "12:38"; ObjectID = "VyJ-ec-puz"; */
+"VyJ-ec-puz.text" = "12:38";
+
+/* Class = "UILabel"; text = "73"; ObjectID = "gjT-SW-0Ky"; */
+"gjT-SW-0Ky.text" = "73";
+
+/* Class = "UILabel"; text = "02:48"; ObjectID = "iUA-aM-fOT"; */
+"iUA-aM-fOT.text" = "02:48";
+
+/* Class = "UIButton"; normalTitle = "See All Games"; ObjectID = "m3J-Zs-hTw"; */
+"m3J-Zs-hTw.normalTitle" = "See All Games";
+
+/* Class = "UILabel"; text = "12"; ObjectID = "nsG-4g-J6h"; */
+"nsG-4g-J6h.text" = "12";
+
+/* Class = "UILabel"; text = "34"; ObjectID = "oaG-hG-HDT"; */
+"oaG-hG-HDT.text" = "34";

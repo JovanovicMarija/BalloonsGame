@@ -1,1 +1,72 @@
 
+/* Class = "UIButton"; normalTitle = "Record"; ObjectID = "0Jy-Au-8A3"; */
+"0Jy-Au-8A3.normalTitle" = "Record";
+
+/* Class = "UIButton"; normalTitle = "Finish & Play"; ObjectID = "3ya-wk-bVL"; */
+"3ya-wk-bVL.normalTitle" = "Finish & Play";
+
+/* Class = "UIButton"; normalTitle = "Create New User"; ObjectID = "4uT-Tt-WwR"; */
+"4uT-Tt-WwR.normalTitle" = "Create New User";
+
+/* Class = "UILabel"; text = "7 points"; ObjectID = "8JR-In-UMA"; */
+"8JR-In-UMA.text" = "7 points";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "8Mv-hl-iWr"; */
+"8Mv-hl-iWr.text" = "Label";
+
+/* Class = "UILabel"; text = "Statistics"; ObjectID = "AWg-Va-OSJ"; */
+"AWg-Va-OSJ.text" = "Statistics";
+
+/* Class = "UILabel"; text = "Users"; ObjectID = "ESs-C5-sMa"; */
+"ESs-C5-sMa.text" = "Users";
+
+/* Class = "UIButton"; normalTitle = "Basic"; ObjectID = "LbP-hw-Idt"; */
+"LbP-hw-Idt.normalTitle" = "Basic";
+
+/* Class = "UILabel"; text = "Click on Add User to create first user and"; ObjectID = "Lev-g0-Km8"; */
+"Lev-g0-Km8.text" = "Click on Add User to create first user and";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Lr1-XQ-ojQ"; */
+"Lr1-XQ-ojQ.text" = "Label";
+
+/* Class = "UILabel"; text = "start playing the game!"; ObjectID = "MDO-60-IdC"; */
+"MDO-60-IdC.text" = "start playing the game!";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "OfN-l3-Yoy"; */
+"OfN-l3-Yoy.text" = "Label";
+
+/* Class = "UIBarButtonItem"; title = "Cancel"; ObjectID = "Sqn-ju-KJx"; */
+"Sqn-ju-KJx.title" = "Cancel";
+
+/* Class = "UILabel"; text = "Welcome back,"; ObjectID = "Tdd-Lk-quD"; */
+"Tdd-Lk-quD.text" = "Welcome back,";
+
+/* Class = "UILabel"; text = "There are no users. Why don't you create one?"; ObjectID = "WdF-cc-lmF"; */
+"WdF-cc-lmF.text" = "There are no users. Why don't you create one?";
+
+/* Class = "UILabel"; text = "20 p"; ObjectID = "d6v-3K-uvH"; */
+"d6v-3K-uvH.text" = "20 p";
+
+/* Class = "UILabel"; text = "Welcome!"; ObjectID = "fyr-du-rSa"; */
+"fyr-du-rSa.text" = "Welcome!";
+
+/* Class = "UIButton"; normalTitle = "Letters"; ObjectID = "g0A-NR-vWB"; */
+"g0A-NR-vWB.normalTitle" = "Letters";
+
+/* Class = "UIButton"; normalTitle = "New Game"; ObjectID = "hXF-d4-LfI"; */
+"hXF-d4-LfI.normalTitle" = "New Game";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "j5m-vD-sJo"; */
+"j5m-vD-sJo.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "Play"; ObjectID = "jIP-CU-DkM"; */
+"jIP-CU-DkM.normalTitle" = "Play";
+
+/* Class = "UIButton"; normalTitle = "Colors"; ObjectID = "oug-Ig-Tvu"; */
+"oug-Ig-Tvu.normalTitle" = "Colors";
+
+/* Class = "UIButton"; normalTitle = "Choose another player"; ObjectID = "qti-Tz-4yh"; */
+"qti-Tz-4yh.normalTitle" = "Choose another player";
+
+/* Class = "UILabel"; text = "Games"; ObjectID = "uCf-CI-YZy"; */
+"uCf-CI-YZy.text" = "Games";
