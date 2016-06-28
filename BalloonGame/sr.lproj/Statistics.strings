@@ -3,7 +3,7 @@
 "0mO-up-RlP.text" = "Najbolji rezultat";
 
 /* Class = "UISegmentedControl"; 4Kp-1V-ooG.segmentTitles[0] = "Starting Time"; ObjectID = "4Kp-1V-ooG"; */
-"4Kp-1V-ooG.segmentTitles[0]" = "Početno vreme";
+"4Kp-1V-ooG.segmentTitles[0]" = "Početak";
 
 /* Class = "UISegmentedControl"; 4Kp-1V-ooG.segmentTitles[1] = "Duration"; ObjectID = "4Kp-1V-ooG"; */
 "4Kp-1V-ooG.segmentTitles[1]" = "Trajanje";

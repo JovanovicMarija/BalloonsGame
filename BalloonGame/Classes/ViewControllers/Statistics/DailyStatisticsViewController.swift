@@ -11,9 +11,23 @@ import UIKit
 
 class DailyStatisticsViewController: UIViewController {
 
-    @IBOutlet weak var segmentFilter: UISegmentedControl!
+    @IBOutlet weak var segmentFilter: UISegmentedControl! {
+        didSet {
+            if UIDevice.currentDevice().userInterfaceIdiom == .Pad {
+                let attributedSegmentFont = NSDictionary(object: UIFont.systemFontOfSize(25), forKey: NSFontAttributeName)
+                segmentFilter.setTitleTextAttributes(attributedSegmentFont as [NSObject : AnyObject], forState: .Normal)
+            }
+        }
+    }
     
-    @IBOutlet weak var segmentSort: UISegmentedControl!
+    @IBOutlet weak var segmentSort: UISegmentedControl! {
+        didSet {
+            if UIDevice.currentDevice().userInterfaceIdiom == .Pad {
+                let attributedSegmentFont = NSDictionary(object: UIFont.systemFontOfSize(25), forKey: NSFontAttributeName)
+                segmentSort.setTitleTextAttributes(attributedSegmentFont as [NSObject : AnyObject], forState: .Normal)
+            }
+        }
+    }
     
     @IBOutlet weak var tableView: UITableView! {
         didSet {
@@ -41,6 +55,7 @@ class DailyStatisticsViewController: UIViewController {
         super.viewWillAppear(animated)
         
         self.title = "\(selectedDate.dateOnly())"
+        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.mainColor()]
     }
 
     override func didReceiveMemoryWarning() {
@@ -88,6 +103,7 @@ extension DailyStatisticsViewController: UITableViewDataSource {
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell") as! DailyStatisticsTableViewCell
+        cell.backgroundColor = UIColor.clearColor()
         
         let singleGame = filteredAndSortedData[indexPath.row]
         
