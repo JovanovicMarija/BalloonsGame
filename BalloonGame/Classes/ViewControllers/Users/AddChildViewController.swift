@@ -131,9 +131,13 @@ class AddChildViewController: UIViewController {
     
     @IBAction func buttonBackPressed(sender: AnyObject) {
         if changesMade {
-            let alert = UIAlertController(title: "Warning", message: "Are you sure you want to discard all changes?", preferredStyle: .Alert)
-            alert.addAction(UIAlertAction(title: "No", style: .Cancel, handler: nil))
-            alert.addAction(UIAlertAction(title: "Yes", style: .Destructive, handler: { [unowned self] _ in
+            let title = NSLocalizedString("AlertTitleDiscardingChanges", comment: "Warning")
+            let message = NSLocalizedString("AlertMessageDiscardingChanges", comment: "Are you sure you want to discard all changes?")
+            let alert = UIAlertController(title: title, message: message, preferredStyle: .Alert)
+            let titleNo = NSLocalizedString("No", comment: "No")
+            let titleYes = NSLocalizedString("Yes", comment: "Yes")
+            alert.addAction(UIAlertAction(title: titleNo, style: .Cancel, handler: nil))
+            alert.addAction(UIAlertAction(title: titleYes, style: .Destructive, handler: { [unowned self] _ in
                 self.navigationController?.popViewControllerAnimated(true)
                 }))
             presentViewController(alert, animated: true, completion: nil)
@@ -145,21 +149,25 @@ class AddChildViewController: UIViewController {
     
     // MARK: - buttons
     @IBAction func buttonPhotoPressed(sender: AnyObject) {
-        let actionSheet = UIAlertController(title: "Photo", message: "Choose a photo", preferredStyle: .ActionSheet)
-        actionSheet.addAction(UIAlertAction(title: "Take a photo", style: .Default, handler: { _ in
+        let title = NSLocalizedString("AlertTitlePhoto", comment: "Photo")
+        let message = NSLocalizedString("AlertMessagePhoto", comment: "Choose a photo")
+        let actionSheet = UIAlertController(title: title, message: message, preferredStyle: .ActionSheet)
+        let titleTakePhoto = NSLocalizedString("ActionTakePhoto", comment: "Take a photo")
+        actionSheet.addAction(UIAlertAction(title: titleTakePhoto, style: .Default, handler: { _ in
             let picker = UIImagePickerController()
             picker.sourceType = .Camera
             picker.delegate = self
             self.presentViewController(picker, animated: true, completion: nil)
         }))
         
-        actionSheet.addAction(UIAlertAction(title: "Choose from library", style: .Default, handler: { _ in
+        let titleChooseFromLibrary = NSLocalizedString("ActionChooseFromLibrary", comment: "Choose from library")
+        actionSheet.addAction(UIAlertAction(title: titleChooseFromLibrary, style: .Default, handler: { _ in
             let picker = UIImagePickerController()
             picker.delegate = self
             self.presentViewController(picker, animated: true, completion: nil)
         }))
         
-        actionSheet.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: { _ in
+        actionSheet.addAction(UIAlertAction(title: NSLocalizedString("Cancel", comment: "Cancel"), style: .Cancel, handler: { _ in
             
         }))
         
@@ -172,8 +180,10 @@ class AddChildViewController: UIViewController {
         if let text = self.textField.text {
             if text.characters.count == 0 {
                 // present alert view
-                let alert = UIAlertController(title: "Error", message: "Please add user name", preferredStyle: .Alert)
-                alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: { _ in
+                let title = NSLocalizedString("AlertTitleErrorNameMissing", comment: "Error")
+                let message = NSLocalizedString("AlertMessageErrorNameMissing", comment: "Please add user name")
+                let alert = UIAlertController(title: title, message: message, preferredStyle: .Alert)
+                alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "OK"), style: .Default, handler: { _ in
                     self.textField.becomeFirstResponder()
                 }))
                 self.presentViewController(alert, animated: true, completion: nil)
@@ -344,8 +354,10 @@ extension AddChildViewController: UICollectionViewDelegate {
         } else { // first time
             firstTimePressedCollectionCell = false
             // present the message
-            let alert = UIAlertController(title: "Did you know?", message: "To edit the word or the sound, long press the letter", preferredStyle: .Alert)
-            alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: { [unowned self] _ in
+            let title = NSLocalizedString("AlertTitleSoundEditing", comment: "Did you know?")
+            let message = NSLocalizedString("AlertMessageSoundEditing", comment: "To edit the word or the sound, long press the letter")
+            let alert = UIAlertController(title: title, message: message, preferredStyle: .Alert)
+            alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "OK"), style: .Default, handler: { [unowned self] _ in
                 self.playSoundForLetterAtIndex(indexPath.row)
                 }))
             presentViewController(alert, animated: true, completion: nil)

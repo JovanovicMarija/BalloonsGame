@@ -26,6 +26,10 @@ OK = "OK";
 
 Cancel = "Cancel";
 
+Yes = "Yes";
+
+No = "No";
+
 AlertTitleDeleteUser = "Are you sure you want to delete user?";
 
 AlertMessageDeleteUser = "This will delete all related data and statistics. This action cannot be undone.";
@@ -33,3 +37,23 @@ AlertMessageDeleteUser = "This will delete all related data and statistics. This
 AlertTitleDefaultUserDeleted = "Default user deleted";
 
 AlertMessageDefaultUserDeleted = "Please choose new default player.";
+
+AlertTitleDiscardingChanges = "Warning";
+
+AlertMessageDiscardingChanges = "Are you sure you want to discard all changes?";
+
+AlertTitleErrorNameMissing = "Error";
+
+AlertMessageErrorNameMissing = "Please add user name";
+
+AlertTitleSoundEditing = "Did you know?";
+
+AlertMessageSoundEditing = "To edit the word or the sound, long press the letter";
+
+AlertTitlePhoto = "Photo";
+
+AlertMessagePhoto = "Choose a photo";
+
+ActionTakePhoto = "Take a photo";
+
+ActionChooseFromLibrary = "Choose from library";

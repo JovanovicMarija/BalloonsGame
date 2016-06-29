@@ -30,7 +30,7 @@ class AllChildrenTableViewCell: UITableViewCell {
                 labelTotalGamePlayed.text = NSLocalizedString("GamesPlayed", comment: "Total number of played games") + "\(user.totalGamesPlayes())"
                 
                 
-                if user.id == (NSUserDefaults.standardUserDefaults().objectForKey(userDefaults.LastUser.rawValue) as! String) {
+                if user.id == (NSUserDefaults.standardUserDefaults().objectForKey(userDefaults.LastUser.rawValue) as? String) {
                     backgroundColor = UIColor.mainColor()
                     labelName.textColor = UIColor.whiteColor()
                     labelScore.textColor = UIColor.whiteColor()

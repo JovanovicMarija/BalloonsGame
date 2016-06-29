@@ -91,22 +91,6 @@ class User: NSManagedObject {
         }
     }
     
-    func totalPoints() -> Int {
-        if self.arraySingleGames == nil {
-            return 0
-        }
-        
-        var result = 0
-        for game in self.arraySingleGames! {
-            result+=Int((game as! SingleGame).points!)
-        }
-        return result
-    }
-    
-    func totalGamesPlayes() -> Int {
-        return self.arraySingleGames?.count ?? 0
-    }
-    
     func addGame(game: SingleGame) {
         
         //1
@@ -129,6 +113,34 @@ class User: NSManagedObject {
             print("Could not fetch \(error), \(error.userInfo)")
         }
         
+    }
+    
+    func totalPoints() -> Int {
+        if self.arraySingleGames == nil {
+            return 0
+        }
+        
+        var result = 0
+        for game in self.arraySingleGames! {
+            result+=Int((game as! SingleGame).points!)
+        }
+        return result
+    }
+    
+    func totalGamesPlayes() -> Int {
+        return self.arraySingleGames?.count ?? 0
+    }
+    
+    func dateOfLastPlayedGame() -> NSDate {
+        var result = NSDate(timeIntervalSince1970: 0)
+        if self.arraySingleGames != nil {
+            for game in self.arraySingleGames! {
+                if game.date!.compare(result) == .OrderedDescending {
+                    result = game.date!
+                }
+            }
+        }
+        return result
     }
     
 }

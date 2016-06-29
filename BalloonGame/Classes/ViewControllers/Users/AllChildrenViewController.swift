@@ -38,8 +38,6 @@ class AllChildrenViewController: UIViewController {
     var filteredUsers: [User] = [User]()
     private let segueIdentifier = "allChildrenToSingleChildSegue"
     
-    private var isDefaultUserDeleted = false
-    
     // MARK: - ViewController Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,22 +56,27 @@ class AllChildrenViewController: UIViewController {
         super.viewWillAppear(animated)
         
         if let users = User.allUsers() {
-            self.users = users
-            tableView.reloadData()
-            tableView.hidden = false
-            labelNoUsers.hidden = true
-            self.navigationItem.leftBarButtonItem = buttonMenu
-        } else { // there are no users
-            tableView.hidden = true
-            labelNoUsers.hidden = false
-            self.navigationItem.leftBarButtonItem = nil
+            if users.count > 0 {
+                self.users = users.sort({ $0.dateOfLastPlayedGame().compare($1.dateOfLastPlayedGame()) == .OrderedDescending })
+                tableView.reloadData()
+                tableView.hidden = false
+                labelNoUsers.hidden = true
+                self.navigationItem.leftBarButtonItem = buttonMenu
+                
+                return
+            }
+            
         }
+        // there are no users
+        tableView.hidden = true
+        labelNoUsers.hidden = false
+        self.navigationItem.leftBarButtonItem = nil
     }
     
     // MARK: - Menu
     
     @IBAction func buttonMenuPressed(sender: AnyObject) {
-        if isDefaultUserDeleted {
+        if NSUserDefaults.standardUserDefaults().objectForKey(userDefaults.LastUser.rawValue) == nil {
             let title = NSLocalizedString("AlertTitleDefaultUserDeleted", comment: "Default user deleted")
             let message = NSLocalizedString("AlertMessageDefaultUserDeleted", comment: "Please choose new default player.")
             let alert = UIAlertController(title: title, message: message, preferredStyle: .Alert)
@@ -101,8 +104,8 @@ class AllChildrenViewController: UIViewController {
 
 }
 
+// MARK: - UITableViewDataSource
 extension AllChildrenViewController: UITableViewDataSource {
-    // MARK: - TableView DataSource
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if searchController.active && searchController.searchBar.text != "" {
             return filteredUsers.count
@@ -125,6 +128,7 @@ extension AllChildrenViewController: UITableViewDataSource {
     }
 }
 
+// MARK: - UITableViewDelegate
 extension AllChildrenViewController: UITableViewDelegate {
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         // chosen user
@@ -145,8 +149,8 @@ extension AllChildrenViewController: UITableViewDelegate {
             }))
             alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "OK"), style: .Destructive, handler: { _ in
                 // check if this is default user
-                if self.users[indexPath.row].id == (NSUserDefaults.standardUserDefaults().objectForKey(userDefaults.LastUser.rawValue) as! String) {
-                    self.isDefaultUserDeleted = true
+                if self.users[indexPath.row].id == (NSUserDefaults.standardUserDefaults().objectForKey(userDefaults.LastUser.rawValue) as? String) {
+                    NSUserDefaults.standardUserDefaults().removeObjectForKey(userDefaults.LastUser.rawValue)
                 }
                 
                 // TODO:
@@ -190,6 +194,7 @@ extension AllChildrenViewController: UITableViewDelegate {
     }
 }
 
+// MARK: - UISearchResultsUpdating
 extension AllChildrenViewController: UISearchResultsUpdating {
     
     func updateSearchResultsForSearchController(searchController: UISearchController) {

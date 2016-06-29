@@ -12,7 +12,7 @@ TapToRe-record = "Ponovi snimanje";
 
 TapToRecord = "Započni snimanje";
 
-AddUser = "Dodaj korisnika";
+AddUser = "Dodaj igrača";
 
 Points = "Poeni: ";
 
@@ -26,10 +26,34 @@ OK = "OK";
 
 Cancel = "Odustani";
 
-AlertTitleDeleteUser = "Da li ste sigurni da želite da obrišete ovog korisnika?";
+Yes = "Da";
+
+No = "Ne";
+
+AlertTitleDeleteUser = "Da li ste sigurni da želite da obrišete ovog igrača?";
 
 AlertMessageDeleteUser = "Obrisaće se i svi njegovi podaci i statistika. Ova akcija ne može biti poništena.";
 
 AlertTitleDefaultUserDeleted = "Prethodni igrač je obrisan";
 
 AlertMessageDefaultUserDeleted = "Odaberite novog igrača.";
+
+AlertTitleDiscardingChanges = "Upozorenje";
+
+AlertMessageDiscardingChanges = "Da li ste sigurni da želite da odustanete od izmena?";
+
+AlertTitleErrorNameMissing = "Greška";
+
+AlertMessageErrorNameMissing = "Unesite ime igrača";
+
+AlertTitleSoundEditing = "Da li ste znali?";
+
+AlertMessageSoundEditing = "Dugo pritisnite kako biste izmenili reč ili zvuk";
+
+AlertTitlePhoto = "Fotografija";
+
+AlertMessagePhoto = "Izaberite fotografiju";
+
+ActionTakePhoto = "Uslikajte";
+
+ActionChooseFromLibrary = "Izaberite iz albuma";
