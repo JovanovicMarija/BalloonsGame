@@ -15,7 +15,12 @@ class AddChildViewController: UIViewController {
     var existingUser: User?
     
     // IBOutlets
-    @IBOutlet weak var textField: UITextField!
+    @IBOutlet weak var textField: UITextField! {
+        didSet {
+            textField.delegate = self
+        }
+    }
+    
     @IBOutlet weak var buttonPhoto: UIButton!
 
     @IBOutlet weak var collectionView: UICollectionView!
@@ -277,6 +282,13 @@ class AddChildViewController: UIViewController {
             modalViewController.modalPresentationStyle = .OverCurrentContext
             presentViewController(modalViewController, animated: true, completion: nil)
         }
+    }
+}
+
+extension AddChildViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
     }
 }
 

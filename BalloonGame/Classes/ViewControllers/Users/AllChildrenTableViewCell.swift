@@ -19,6 +19,7 @@ class AllChildrenTableViewCell: UITableViewCell {
     
     @IBOutlet weak var labelName: UILabel!
     @IBOutlet weak var labelScore: UILabel!
+    @IBOutlet weak var labelTotalGamePlayed: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

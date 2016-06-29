@@ -55,33 +55,16 @@ class AllChildrenViewController: UIViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
-        //1
-        let appDelegate =
-            UIApplication.sharedApplication().delegate as! AppDelegate
-        let managedContext = appDelegate.managedObjectContext
-        
-        //2
-        let fetchRequest = NSFetchRequest(entityName: "User")
-        
-        //3
-        do {
-            let results =
-                try managedContext.executeFetchRequest(fetchRequest)
-            users = results as! [User]
+        if let users = User.allUsers() {
+            self.users = users
             tableView.reloadData()
-            
-            if users.count > 0 {
-                tableView.hidden = false
-                labelNoUsers.hidden = true
-                self.navigationItem.leftBarButtonItem = buttonMenu
-            } else {
-                tableView.hidden = true
-                labelNoUsers.hidden = false
-                self.navigationItem.leftBarButtonItem = nil
-            }
-            
-        } catch let error as NSError {
-            print("Could not fetch \(error), \(error.userInfo)")
+            tableView.hidden = false
+            labelNoUsers.hidden = true
+            self.navigationItem.leftBarButtonItem = buttonMenu
+        } else { // there are no users
+            tableView.hidden = true
+            labelNoUsers.hidden = false
+            self.navigationItem.leftBarButtonItem = nil
         }
     }
     
@@ -128,31 +111,39 @@ extension AllChildrenViewController: UITableViewDataSource {
         cell.backgroundColor = UIColor.clearColor()
         cell.imageViewPhoto.image = UIImage(data: user.photo!)
         cell.labelName.text = user.name
+        cell.labelScore.text = "\(user.totalPoints())"
         return cell
     }
-    
-    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        
-        if editingStyle == .Delete {
+}
+
+extension AllChildrenViewController: UITableViewDelegate {
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        // chosen user
+        let chosenUser = users[indexPath.row]
+        // remember user as last user in userDefaults
+        NSUserDefaults.standardUserDefaults().setObject(chosenUser.id, forKey: userDefaults.LastUser.rawValue)
+    }
+
+    func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]? {
+        let delete = UITableViewRowAction(style: .Destructive, title: "Delete") { (action, indexPath) in
+            // delete item at indexPath
             let alert = UIAlertController(title: "Are you sure you want to delete user?", message: "This will delete all related data and statistics. This action cannot be undone.", preferredStyle: .Alert)
             alert.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: { _ in
                 // hide delete button
                 tableView.editing = false
             }))
             alert.addAction(UIAlertAction(title: "OK", style: .Destructive, handler: { _ in
+                // TODO:
+                // First: delete all games associate to user id
+                // Second: delete all sounds
+                // Lastly: delete user
+                
+                // delete all games
+                self.users[indexPath.row].deleteAllGames()
+                
                 // remove from core data
-                //1
-                let appDelegate =
-                    UIApplication.sharedApplication().delegate as! AppDelegate
-                let managedContext = appDelegate.managedObjectContext
-                // 2
-                managedContext.deleteObject(self.users[indexPath.row])
-                //3
-                do {
-                    try managedContext.save()
-                } catch let error as NSError  {
-                    print("Could not save \(error), \(error.userInfo)")
-                }
+                self.users[indexPath.row].deleteUser()
+                
                 // remove from data source
                 self.users.removeAtIndex(indexPath.row)
                 // reload table
@@ -169,22 +160,6 @@ extension AllChildrenViewController: UITableViewDataSource {
                 
             }))
             self.presentViewController(alert, animated: true, completion: nil)
-        }
-        
-    }
-}
-
-extension AllChildrenViewController: UITableViewDelegate {
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        // chosen user
-        let chosenUser = users[indexPath.row]
-        // remember user as last user in userDefaults
-        NSUserDefaults.standardUserDefaults().setObject(chosenUser.id, forKey: userDefaults.LastUser.rawValue)
-    }
-
-    func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]? {
-        let delete = UITableViewRowAction(style: .Destructive, title: "Delete") { (action, indexPath) in
-            // delete item at indexPath
         }
         
         let edit = UITableViewRowAction(style: .Normal, title: "Edit") { [unowned self] (action, indexPath) in

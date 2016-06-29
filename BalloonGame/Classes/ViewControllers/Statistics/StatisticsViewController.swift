@@ -60,7 +60,6 @@ class StatisticsViewController: UIViewController {
             let calendar = NSCalendar.currentCalendar()
             let components = calendar.components([.Day, .Month, .Year], fromDate: game.date!)
             let dateOnly = NSCalendar.currentCalendar().dateFromComponents(components)
-            print("\t\(game.date!) \(dateOnly!)")
             
             if !datesWithEvents.contains(dateOnly!) {
                 datesWithEvents.append(dateOnly!)

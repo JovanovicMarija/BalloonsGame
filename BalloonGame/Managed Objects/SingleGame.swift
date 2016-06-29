@@ -20,29 +20,43 @@ class SingleGame: NSManagedObject {
         
         var games: [SingleGame] = [SingleGame]()
         
+        if let user = User.userWithID(id) {
+            games = user.arraySingleGames!.allObjects as! [SingleGame]
+        }
+        
+        return games
+    }
+    
+    static func saveGame(game: Game) -> SingleGame? {
+        
         //1
         let appDelegate =
             UIApplication.sharedApplication().delegate as! AppDelegate
         
         let managedContext = appDelegate.managedObjectContext
         
-        // 2
-        let fetchRequest = NSFetchRequest(entityName: "User")
-        let predicate = NSPredicate(format: "id == %@", id)
-        fetchRequest.predicate = predicate
-        // 3
+        //2
+        let entity =  NSEntityDescription.entityForName("SingleGame",
+                                                        inManagedObjectContext:managedContext)
+        
+        let singleGame = NSManagedObject(entity: entity!,
+                                         insertIntoManagedObjectContext: managedContext) as! SingleGame
+        
+        //3
+        singleGame.id = NSUUID().UUIDString
+        singleGame.type = Manager.sharedInstance.gameMode.rawValue
+        singleGame.duration = game.duration
+        singleGame.date = game.date
+        singleGame.points = game.points
+        
+        //4
         do {
-            let results =
-                try managedContext.executeFetchRequest(fetchRequest)
-            let user = results[0] as! User
-            
-            games = user.arraySingleGames!.allObjects as! [SingleGame]
-            
-        } catch let error as NSError {
-            print("Could not fetch \(error), \(error.userInfo)")
+            try managedContext.save()
+            return singleGame
+        } catch let error as NSError  {
+            print("Could not save \(error), \(error.userInfo)")
         }
         
-        return games
+        return nil
     }
-    
 }

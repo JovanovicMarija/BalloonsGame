@@ -19,7 +19,16 @@ class Manager {
     var currentUser: User?
     
     static let sharedInstance = Manager()
-    private init() {}
+    private init() {
+        if let audioPlayerError = self.setupAudioPlayerWithFile("error", type:"mp3") {
+            self.audioPlayerError = audioPlayerError
+        }
+        if let audioPlayerBackgroundMusic = self.setupAudioPlayerWithFile("gameSong1", type:"mp3") {
+            self.audioPlayerBackgroundMusic = audioPlayerBackgroundMusic
+            self.audioPlayerBackgroundMusic?.volume = 0.3 // value between 0 (off) and 1 (full volume)
+            self.audioPlayerBackgroundMusic?.numberOfLoops = -1 // indefinite number of loops
+        }
+    }
     
     var delegatePointsUpdater: TopViewDelegate? = nil
         
@@ -27,7 +36,10 @@ class Manager {
 //    var currentGame: BalloonProtocol?
     var currentGame: Game?
     
-    var audioPlayer = AVAudioPlayer()
+    // audio players
+    var audioPlayerError : AVAudioPlayer?
+    var audioPlayerLetter : AVAudioPlayer?
+    var audioPlayerBackgroundMusic : AVAudioPlayer?
 
     // MARK: - methods
     func startGame() -> Game {
@@ -55,42 +67,54 @@ class Manager {
         self.currentGame!.missed()
     }
     
-    func playSoundWithName(name: String, type: String) {
-        let coinSound = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource(name, ofType: type)!)
+    
+    // MARK: - sound
+    func setupAudioPlayerWithFile(file: String, type: String) -> AVAudioPlayer?  {
+        //1
+        let path = NSBundle.mainBundle().pathForResource(file, ofType: type)
+        let url = NSURL.fileURLWithPath(path!)
+        
+        //2
+        var audioPlayer:AVAudioPlayer?
+        
+        // 3
         do {
-            try audioPlayer = AVAudioPlayer(contentsOfURL: coinSound)
+            try audioPlayer = AVAudioPlayer(contentsOfURL: url)
         } catch {
-            print("playLetter")
+            print("Player not available")
         }
+        
+        return audioPlayer
+    }
+    
+    func playSoundForAudioPlayer(audioPlayer: AVAudioPlayer) {
         audioPlayer.prepareToPlay()
         audioPlayer.play()
     }
     
-    func playAmbientMusic() {
-        let ambientMusic = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("gameSong1", ofType: "mp3")!)
-        do {
-            try audioPlayer = AVAudioPlayer(contentsOfURL: ambientMusic)
-        } catch {
-            print("ambientMusic")
+    func playSoundWithName(name: String, type: String) {
+        if let audioPlayerLetter = self.setupAudioPlayerWithFile(name, type:type) {
+            self.audioPlayerLetter = audioPlayerLetter
+            playSoundForAudioPlayer(audioPlayerLetter)
         }
-        audioPlayer.numberOfLoops = -1 // indefinite number of loops
-        audioPlayer.prepareToPlay()
-        audioPlayer.play()
+    }
+    
+    func playBackgroundMusic() {
+        if let audioPlayerBackgroundMusic = self.audioPlayerBackgroundMusic {
+            playSoundForAudioPlayer(audioPlayerBackgroundMusic)
+        }
     }
     
     func playErrorSound() {
-        let errorSound = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("error", ofType: "mp3")!)
-        do {
-            try audioPlayer = AVAudioPlayer(contentsOfURL: errorSound)
-        } catch {
-            print("errorSound")
+        if let audioPlayerError = self.audioPlayerError {
+            playSoundForAudioPlayer(audioPlayerError)
         }
-        audioPlayer.prepareToPlay()
-        audioPlayer.play()
     }
     
     func stopSound() {
-        audioPlayer.stop()
+        audioPlayerError?.stop()
+        audioPlayerLetter?.stop()
+        audioPlayerBackgroundMusic?.stop()
     }
 }
 

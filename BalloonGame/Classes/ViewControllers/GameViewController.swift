@@ -55,22 +55,10 @@ class GameViewController: UIViewController {
         let longPress = UILongPressGestureRecognizer(target: self, action: #selector(GameViewController.handleLongPress))
         view.addGestureRecognizer(longPress)
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "rotated", name: UIDeviceOrientationDidChangeNotification, object: nil)
-
+        // add observers
+        addObservers()
     }
-    func rotated()
-    {
-        if(UIDeviceOrientationIsLandscape(UIDevice.currentDevice().orientation))
-        {
-            print("landscape")
-        }
-        
-        if(UIDeviceOrientationIsPortrait(UIDevice.currentDevice().orientation))
-        {
-            print("Portrait")
-        }
-        
-    }
+    
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -87,7 +75,7 @@ class GameViewController: UIViewController {
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
-        Manager.sharedInstance.playAmbientMusic()
+        Manager.sharedInstance.playBackgroundMusic()
     }
     
     override func viewWillDisappear(animated: Bool) {
@@ -104,6 +92,23 @@ class GameViewController: UIViewController {
         
         // save game to Core Data
         end()
+        
+        // remove observers
+        removeObservers()
+    }
+    
+    // MARK: - Notifications
+    func addObservers() {
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(willEnterForeground), name: UIApplicationWillEnterForegroundNotification, object: nil)
+    }
+    
+    func removeObservers() {
+        NSNotificationCenter.defaultCenter().removeObserver(self, name: UIApplicationWillEnterForegroundNotification, object: nil)
+        
+    }
+    
+    func willEnterForeground() {
+        Manager.sharedInstance.playBackgroundMusic()
     }
     
     // MARK: - gesture recognizer
@@ -172,76 +177,19 @@ extension GameViewController: TopViewDelegate {
     // method that saves current game to core data
     func end() {
         game.end()
-        if let singleGame = saveGame() {
+        if let singleGame = SingleGame.saveGame(game) {
             addGameToCurrentUser(singleGame)
         }
     }
     
-    private func saveGame() -> SingleGame? {
-        //1
-        let appDelegate =
-            UIApplication.sharedApplication().delegate as! AppDelegate
-        
-        let managedContext = appDelegate.managedObjectContext
-        
-        //2
-        let entity =  NSEntityDescription.entityForName("SingleGame",
-                                                        inManagedObjectContext:managedContext)
-        
-        let singleGame = NSManagedObject(entity: entity!,
-                                         insertIntoManagedObjectContext: managedContext) as! SingleGame
-        
-        //3
-        singleGame.id = NSUUID().UUIDString
-        singleGame.type = Manager.sharedInstance.gameMode.rawValue
-        singleGame.duration = game.duration
-        singleGame.date = game.date
-        singleGame.points = game.points
-        
-        //4
-        do {
-            try managedContext.save()
-            return singleGame
-        } catch let error as NSError  {
-            print("Could not save \(error), \(error.userInfo)")
-        }
-        
-        return nil
-    }
-    
     private func addGameToCurrentUser(game: SingleGame) {
-        // TODO: - implement
         
         guard let currentUserID = NSUserDefaults.standardUserDefaults().stringForKey(userDefaults.LastUser.rawValue) else {
             fatalError()
         }
         
-        //1
-        let appDelegate =
-            UIApplication.sharedApplication().delegate as! AppDelegate
-        
-        let managedContext = appDelegate.managedObjectContext
-        
-        // 2
-        let fetchRequest = NSFetchRequest(entityName: "User")
-        let predicate = NSPredicate(format: "id == %@", currentUserID)
-        fetchRequest.predicate = predicate
-        // 3
-        do {
-            let results =
-                try managedContext.executeFetchRequest(fetchRequest)
-            let user = results[0] as! User
-            
-            var existingGames = user.arraySingleGames!.allObjects as! [SingleGame]
-            existingGames.append(game)
-            user.arraySingleGames = NSSet(array: existingGames)
-            
-            // 4
-            try managedContext.save()
-            
-        } catch let error as NSError {
-            print("Could not fetch \(error), \(error.userInfo)")
+        if let currentUser = User.userWithID(currentUserID) {
+            currentUser.addGame(game)
         }
-    
     }
 }
