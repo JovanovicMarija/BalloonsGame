@@ -13,15 +13,20 @@ class TutorialViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        let panel1 = MYIntroductionPanel(frame: self.view.frame, title: "title", description: "description", image: UIImage(named: "background")!)
-        let panel2 = MYIntroductionPanel(frame: self.view.frame, title: "title", description: "description", image: UIImage(named: "background")!)
-        let panel3 = MYIntroductionPanel(frame: self.view.frame, title: "title", description: "description", image: UIImage(named: "background")!)
-
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        let frame = CGRectMake(0, 64, self.view.frame.width, self.view.frame.height-64)
+        let panel1 = MYIntroductionPanel(frame: frame, title: "title", description: "description", image: UIImage(named: "background")!)
+        let panel2 = MYIntroductionPanel(frame: frame, title: "title", description: "description", image: UIImage(named: "background")!)
+        let panel3 = MYIntroductionPanel(frame: frame, title: "title", description: "description", image: UIImage(named: "background")!)
+        
         
         
         //Create the introduction view and set its delegate
-        let introductionView = MYBlurIntroductionView(frame: self.view.frame)
+        let introductionView = MYBlurIntroductionView(frame: frame)
         introductionView.delegate = self
         introductionView.backgroundColor = UIColor.mainColor()
         
@@ -33,6 +38,10 @@ class TutorialViewController: UIViewController {
         
         //Add the introduction to your view
         self.view.addSubview(introductionView)
+    }
+    
+    override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
+        return UIInterfaceOrientationMask.Portrait
     }
 
     override func didReceiveMemoryWarning() {

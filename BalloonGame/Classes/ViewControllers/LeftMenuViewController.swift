@@ -42,6 +42,8 @@ class LeftMenuViewController: UITableViewController {
             imageName = "menuUserFilled"
         case 2:
             imageName = "menuStatisticsFilled"
+        case 3:
+            imageName = "menuTutorialFilled"
         default:
             fatalError("index path out of bounderies")
         }
@@ -59,12 +61,14 @@ class LeftMenuViewController: UITableViewController {
         let oldCell = tableView.cellForRowAtIndexPath(currentIndexPath)
         let oldImageName: String
         switch currentIndexPath.row {
-            case 0:
-                oldImageName = "menuGameLined"
-            case 1:
-                oldImageName = "menuUserLined"
-            case 2:
-                oldImageName = "menuStatisticsLined"
+        case 0:
+            oldImageName = "menuGameLined"
+        case 1:
+            oldImageName = "menuUserLined"
+        case 2:
+            oldImageName = "menuStatisticsLined"
+        case 3:
+            oldImageName = "menuTutorialLined"
             default:
                 fatalError("index path out of bounderies")
         }
@@ -83,6 +87,8 @@ class LeftMenuViewController: UITableViewController {
             newImageName = "menuUserFilled"
         case 2:
             newImageName = "menuStatisticsFilled"
+        case 3:
+            newImageName = "menuTutorialFilled"
         default:
             fatalError("index path out of bounderies")
         }
@@ -98,6 +104,9 @@ class LeftMenuViewController: UITableViewController {
             self.sideMenuViewController.hideMenuViewController()
         case 2:
             self.sideMenuViewController.setContentViewController(UINavigationController(rootViewController: self.storyboard!.instantiateViewControllerWithIdentifier("statisticsViewController")), animated: true)
+            self.sideMenuViewController.hideMenuViewController()
+        case 3:
+            self.sideMenuViewController.setContentViewController(UINavigationController(rootViewController: self.storyboard!.instantiateViewControllerWithIdentifier("tutorialViewController")), animated: true)
             self.sideMenuViewController.hideMenuViewController()
         default:
             return

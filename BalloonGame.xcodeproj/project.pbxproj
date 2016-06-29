@@ -112,6 +112,7 @@
 		538C13BF8593DBA2D2DD63E6 /* Pods_BalloonGame.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BalloonGame.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		851FC0631D2288AA00553C1D /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		851FC0651D2288AB00553C1D /* sr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sr; path = sr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		855ED2E61D247A7500BA7C55 /* sr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sr; path = sr.lproj/Main.strings; sourceTree = "<group>"; };
 		8573DF711D227B2E00DF2C1F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8573DF731D227B2E00DF2C1F /* BalloonGame.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BalloonGame.xcdatamodel; sourceTree = "<group>"; };
 		8573DF761D227B2E00DF2C1F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -202,7 +203,6 @@
 		8573DFDE1D227B2E00DF2C1F /* yellow.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = yellow.m4a; sourceTree = "<group>"; };
 		8573DFDF1D227B2E00DF2C1F /* zebra.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = zebra.m4a; sourceTree = "<group>"; };
 		85A6BD6E1D24725700C94E10 /* TutorialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
-		85BB76951D22817800083AD0 /* sr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sr; path = sr.lproj/Main.strings; sourceTree = "<group>"; };
 		85BB769C1D2282A200083AD0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Statistics.storyboard; sourceTree = "<group>"; };
 		85BB769F1D2282AA00083AD0 /* sr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sr; path = sr.lproj/Statistics.strings; sourceTree = "<group>"; };
 		85CAFDDD1D2270720016BBE2 /* BalloonGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BalloonGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -732,7 +732,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				85CAFDE51D2270730016BBE2 /* Base */,
-				85BB76951D22817800083AD0 /* sr */,
+				855ED2E61D247A7500BA7C55 /* sr */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";

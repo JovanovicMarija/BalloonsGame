@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ijG-OZ-SbH">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Eyb-m9-ZBn">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -107,7 +107,7 @@
                                                     <rect key="frame" x="64" y="0.0" width="233" height="39"/>
                                                 </variation>
                                                 <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                                    <rect key="frame" x="64" y="0.0" width="233" height="39"/>
+                                                    <rect key="frame" x="60" y="0.0" width="240" height="39"/>
                                                 </variation>
                                                 <variation key="heightClass=regular-widthClass=regular">
                                                     <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="56"/>
@@ -126,7 +126,7 @@
                                                     <rect key="frame" x="139" y="39" width="83" height="39"/>
                                                 </variation>
                                                 <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                                    <rect key="frame" x="139" y="39" width="83" height="39"/>
+                                                    <rect key="frame" x="137" y="39" width="86" height="39"/>
                                                 </variation>
                                                 <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
                                                     <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="56"/>
@@ -169,7 +169,7 @@
                                             <rect key="frame" x="0.0" y="127" width="360" height="72"/>
                                         </variation>
                                         <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                            <rect key="frame" x="0.0" y="127" width="360" height="72"/>
+                                            <rect key="frame" x="0.0" y="127" width="360" height="48"/>
                                         </variation>
                                         <variation key="heightClass=regular-widthClass=regular">
                                             <fontDescription key="fontDescription" type="system" pointSize="42"/>
@@ -186,7 +186,7 @@
                                     <rect key="frame" x="20" y="-150" width="560" height="199"/>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="20" y="51" width="360" height="199"/>
+                                    <rect key="frame" x="20" y="51" width="360" height="175"/>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
                                     <rect key="frame" x="20" y="51" width="760" height="256"/>
@@ -644,6 +644,32 @@
                                             <color key="backgroundColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" textLabel="Z0m-Sl-0ut" imageView="dPO-Cp-NrT" style="IBUITableViewCellStyleDefault" id="NXQ-2J-fh6">
+                                        <rect key="frame" x="0.0" y="240" width="600" height="80"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NXQ-2J-fh6" id="ZlF-48-Sr9">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="80"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Tutorial" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Z0m-Sl-0ut">
+                                                    <rect key="frame" x="110" y="0.0" width="475" height="80"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <variation key="heightClass=regular-widthClass=regular">
+                                                        <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                                    </variation>
+                                                </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="menuTutorialLined" id="dPO-Cp-NrT">
+                                                    <rect key="frame" x="15" y="0.0" width="80" height="80"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -931,7 +957,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nHN-kv-bm9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5346" y="1829"/>
+            <point key="canvasLocation" x="6158" y="1829"/>
         </scene>
         <!--Game View Controller-->
         <scene sceneID="tXr-a1-R10">
@@ -1056,7 +1082,7 @@
         <!--Tutorial View Controller-->
         <scene sceneID="OcH-ag-8Vv">
             <objects>
-                <viewController id="ijG-OZ-SbH" customClass="TutorialViewController" customModule="BalloonGame" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="tutorialViewController" id="ijG-OZ-SbH" customClass="TutorialViewController" customModule="BalloonGame" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="910-bf-hZv"/>
                         <viewControllerLayoutGuide type="bottom" id="RaE-0a-8Eo"/>
@@ -1066,10 +1092,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Tbd-cA-jnC">
+                        <barButtonItem key="leftBarButtonItem" image="menu" id="m0p-yC-szg"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="36K-KW-cCi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3041" y="1825"/>
+            <point key="canvasLocation" x="3853" y="1825"/>
         </scene>
         <!--statisticsViewController-->
         <scene sceneID="em5-9T-wf4">
@@ -1079,6 +1108,24 @@
             </objects>
             <point key="canvasLocation" x="3532" y="2438"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="2ob-rU-dF8">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="X70-0E-7sC" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="sko-X1-8iX">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ijG-OZ-SbH" kind="relationship" relationship="rootViewController" id="M6r-mL-vdN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="avE-Gh-2sV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3041" y="1825"/>
+        </scene>
     </scenes>
     <resources>
         <image name="background" width="667" height="667"/>
@@ -1087,6 +1134,7 @@
         <image name="menu" width="44" height="44"/>
         <image name="menuGameLined" width="60" height="60"/>
         <image name="menuStatisticsLined" width="60" height="60"/>
+        <image name="menuTutorialLined" width="180" height="180"/>
         <image name="menuUserLined" width="60" height="60"/>
         <image name="placeholder" width="100" height="100"/>
     </resources>
