@@ -13,3 +13,23 @@ TapToRe-record = "Tap to Re-record";
 TapToRecord = "Tap to Record";
 
 AddUser = "Add User";
+
+Points = "Points: ";
+
+GamesPlayed = "Games played: ";
+
+Delete = "Delete";
+
+Edit = "Edit";
+
+OK = "OK";
+
+Cancel = "Cancel";
+
+AlertTitleDeleteUser = "Are you sure you want to delete user?";
+
+AlertMessageDeleteUser = "This will delete all related data and statistics. This action cannot be undone.";
+
+AlertTitleDefaultUserDeleted = "Default user deleted";
+
+AlertMessageDefaultUserDeleted = "Please choose new default player.";

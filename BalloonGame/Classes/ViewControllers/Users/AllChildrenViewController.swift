@@ -38,6 +38,8 @@ class AllChildrenViewController: UIViewController {
     var filteredUsers: [User] = [User]()
     private let segueIdentifier = "allChildrenToSingleChildSegue"
     
+    private var isDefaultUserDeleted = false
+    
     // MARK: - ViewController Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -71,7 +73,16 @@ class AllChildrenViewController: UIViewController {
     // MARK: - Menu
     
     @IBAction func buttonMenuPressed(sender: AnyObject) {
-        self.sideMenuViewController.presentLeftMenuViewController()
+        if isDefaultUserDeleted {
+            let title = NSLocalizedString("AlertTitleDefaultUserDeleted", comment: "Default user deleted")
+            let message = NSLocalizedString("AlertMessageDefaultUserDeleted", comment: "Please choose new default player.")
+            let alert = UIAlertController(title: title, message: message, preferredStyle: .Alert)
+            alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "OK"), style: .Default, handler: { _ in
+            }))
+            self.presentViewController(alert, animated: true, completion: nil)
+        } else {
+            self.sideMenuViewController.presentLeftMenuViewController()
+        }
     }
     
     // MARK: - others
@@ -108,10 +119,8 @@ extension AllChildrenViewController: UITableViewDataSource {
         }
         
         let cell = tableView.dequeueReusableCellWithIdentifier("cell") as! AllChildrenTableViewCell
-        cell.backgroundColor = UIColor.clearColor()
-        cell.imageViewPhoto.image = UIImage(data: user.photo!)
-        cell.labelName.text = user.name
-        cell.labelScore.text = "\(user.totalPoints())"
+        cell.user = user
+        
         return cell
     }
 }
@@ -125,14 +134,21 @@ extension AllChildrenViewController: UITableViewDelegate {
     }
 
     func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]? {
-        let delete = UITableViewRowAction(style: .Destructive, title: "Delete") { (action, indexPath) in
+        let delete = UITableViewRowAction(style: .Destructive, title: NSLocalizedString("Delete", comment: "Delete")) { (action, indexPath) in
             // delete item at indexPath
-            let alert = UIAlertController(title: "Are you sure you want to delete user?", message: "This will delete all related data and statistics. This action cannot be undone.", preferredStyle: .Alert)
-            alert.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: { _ in
+            let title = NSLocalizedString("AlertTitleDeleteUser", comment: "Are you sure you want to delete user?")
+            let message = NSLocalizedString("AlertMessageDeleteUser", comment: "This will delete all related data and statistics. This action cannot be undone.")
+            let alert = UIAlertController(title: title, message: message, preferredStyle: .Alert)
+            alert.addAction(UIAlertAction(title: NSLocalizedString("Cancel", comment: "Cancel"), style: .Cancel, handler: { _ in
                 // hide delete button
                 tableView.editing = false
             }))
-            alert.addAction(UIAlertAction(title: "OK", style: .Destructive, handler: { _ in
+            alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "OK"), style: .Destructive, handler: { _ in
+                // check if this is default user
+                if self.users[indexPath.row].id == (NSUserDefaults.standardUserDefaults().objectForKey(userDefaults.LastUser.rawValue) as! String) {
+                    self.isDefaultUserDeleted = true
+                }
+                
                 // TODO:
                 // First: delete all games associate to user id
                 // Second: delete all sounds
@@ -162,7 +178,8 @@ extension AllChildrenViewController: UITableViewDelegate {
             self.presentViewController(alert, animated: true, completion: nil)
         }
         
-        let edit = UITableViewRowAction(style: .Normal, title: "Edit") { [unowned self] (action, indexPath) in
+        let title = NSLocalizedString("Edit", comment: "Edit")
+        let edit = UITableViewRowAction(style: .Normal, title: title) { [unowned self] (action, indexPath) in
             self.performSegueWithIdentifier(self.segueIdentifier, sender: self.users[indexPath.row])
         }
         

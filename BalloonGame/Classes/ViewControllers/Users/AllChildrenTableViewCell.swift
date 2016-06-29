@@ -21,6 +21,30 @@ class AllChildrenTableViewCell: UITableViewCell {
     @IBOutlet weak var labelScore: UILabel!
     @IBOutlet weak var labelTotalGamePlayed: UILabel!
     
+    var user: User? {
+        didSet {
+            if let user = user {
+                imageViewPhoto.image = UIImage(data: user.photo!)
+                labelName.text = user.name
+                labelScore.text = NSLocalizedString("Points", comment: "Total number of points") + "\(user.totalPoints())"
+                labelTotalGamePlayed.text = NSLocalizedString("GamesPlayed", comment: "Total number of played games") + "\(user.totalGamesPlayes())"
+                
+                
+                if user.id == (NSUserDefaults.standardUserDefaults().objectForKey(userDefaults.LastUser.rawValue) as! String) {
+                    backgroundColor = UIColor.mainColor()
+                    labelName.textColor = UIColor.whiteColor()
+                    labelScore.textColor = UIColor.whiteColor()
+                    labelTotalGamePlayed.textColor = UIColor.whiteColor()
+                } else {
+                    backgroundColor = UIColor.clearColor()
+                    labelName.textColor = UIColor.mainColor()
+                    labelScore.textColor = UIColor.mainColor()
+                    labelTotalGamePlayed.textColor = UIColor.mainColor()
+                }
+            }
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
