@@ -1,15 +1,18 @@
 PODS:
   - FSCalendar (2.1.1)
+  - MYBlurIntroductionView (1.0.3)
   - RESideMenu (4.0.7)
 
 DEPENDENCIES:
   - FSCalendar
+  - MYBlurIntroductionView
   - RESideMenu (~> 4.0.7)
 
 SPEC CHECKSUMS:
   FSCalendar: 04dc531f06fbde8a8e5b7394e9d4edebd45a591f
+  MYBlurIntroductionView: b12651c25574580472ff34989a4c5b81c157009f
   RESideMenu: f24c508404b49c667344c54aba7e590883533958
 
-PODFILE CHECKSUM: 26529968d34a19117b22e3560f3fe8d164f3f8ff
+PODFILE CHECKSUM: 0ae534f5333da1e098ae41a61d52ed21c0762cfc
 
 COCOAPODS: 1.0.0

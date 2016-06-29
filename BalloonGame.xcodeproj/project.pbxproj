@@ -98,6 +98,7 @@
 		8573E0391D227B2E00DF2C1F /* xylophone.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 8573DFDD1D227B2E00DF2C1F /* xylophone.m4a */; };
 		8573E03A1D227B2E00DF2C1F /* yellow.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 8573DFDE1D227B2E00DF2C1F /* yellow.m4a */; };
 		8573E03B1D227B2E00DF2C1F /* zebra.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 8573DFDF1D227B2E00DF2C1F /* zebra.m4a */; };
+		85A6BD6F1D24725700C94E10 /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A6BD6E1D24725700C94E10 /* TutorialViewController.swift */; };
 		85BB769B1D2282A200083AD0 /* Statistics.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85BB769D1D2282A200083AD0 /* Statistics.storyboard */; };
 		85CAFDE11D2270730016BBE2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85CAFDE01D2270730016BBE2 /* AppDelegate.swift */; };
 		85CAFDE61D2270730016BBE2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85CAFDE41D2270730016BBE2 /* Main.storyboard */; };
@@ -200,6 +201,7 @@
 		8573DFDD1D227B2E00DF2C1F /* xylophone.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = xylophone.m4a; sourceTree = "<group>"; };
 		8573DFDE1D227B2E00DF2C1F /* yellow.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = yellow.m4a; sourceTree = "<group>"; };
 		8573DFDF1D227B2E00DF2C1F /* zebra.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = zebra.m4a; sourceTree = "<group>"; };
+		85A6BD6E1D24725700C94E10 /* TutorialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
 		85BB76951D22817800083AD0 /* sr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sr; path = sr.lproj/Main.strings; sourceTree = "<group>"; };
 		85BB769C1D2282A200083AD0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Statistics.storyboard; sourceTree = "<group>"; };
 		85BB769F1D2282AA00083AD0 /* sr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sr; path = sr.lproj/Statistics.strings; sourceTree = "<group>"; };
@@ -252,6 +254,7 @@
 				8573DF831D227B2E00DF2C1F /* GameScene.swift */,
 				8573DF841D227B2E00DF2C1F /* Manager.swift */,
 				8573DF851D227B2E00DF2C1F /* ViewControllers */,
+				85A6BD6E1D24725700C94E10 /* TutorialViewController.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -673,6 +676,7 @@
 				8573DFFB1D227B2E00DF2C1F /* RoundedButton.swift in Sources */,
 				8573DFF41D227B2E00DF2C1F /* StatisticsViewController.swift in Sources */,
 				8573DFFD1D227B2E00DF2C1F /* AudioWord.swift in Sources */,
+				85A6BD6F1D24725700C94E10 /* TutorialViewController.swift in Sources */,
 				8573DFF71D227B2E00DF2C1F /* AllChildrenTableViewCell.swift in Sources */,
 				8573DFF31D227B2E00DF2C1F /* DailyStatisticsViewController.swift in Sources */,
 				8573DFEC1D227B2E00DF2C1F /* Manager.swift in Sources */,

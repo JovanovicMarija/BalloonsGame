@@ -8,27 +8,31 @@
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>1</integer>
+		</dict>
+		<key>MYBlurIntroductionView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>Pods-BalloonGame.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>2</integer>
 		</dict>
 		<key>RESideMenu.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>3</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>1913677D6DAC724778F50C4D78FFEE92</key>
+		<key>1DCE1926FDC9FCF15DBC7380821D5B30</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>33DC1EF8AFBEED2AC941C547BBC14F31</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -38,7 +42,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B8C0C3E24B31AE65B7AC09217CF27B61</key>
+		<key>E1225DF74542B399EE152EDA64D2634B</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -8,5 +8,6 @@ target 'BalloonGame' do
   # Pods for BalloonGame
     pod 'RESideMenu', '~> 4.0.7'
     pod 'FSCalendar'
-
+    pod 'MYBlurIntroductionView'
+    
 end
