@@ -699,34 +699,54 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Ng1-V0-O19">
-                                <rect key="frame" x="40" y="42" width="520" height="280"/>
+                                <rect key="frame" x="40" y="42" width="520" height="170"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="vf6-ce-MMo">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="quv-3B-ci4">
                                         <rect key="frame" x="210" y="0.0" width="100" height="100"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="100" id="TaE-hF-FAp"/>
-                                            <constraint firstAttribute="width" constant="100" id="eXt-zm-6ti"/>
-                                        </constraints>
-                                        <variation key="heightClass=compact" misplaced="YES">
-                                            <rect key="frame" x="210" y="0.0" width="100" height="100"/>
-                                        </variation>
-                                    </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QbL-U8-TtD">
-                                        <rect key="frame" x="210" y="110" width="100" height="100"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="vf6-ce-MMo">
+                                                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="100" id="cbn-IM-FSK">
+                                                        <variation key="heightClass=regular-widthClass=regular" constant="200"/>
+                                                    </constraint>
+                                                    <constraint firstAttribute="height" constant="100" id="rhI-8M-C5o">
+                                                        <variation key="heightClass=regular-widthClass=regular" constant="200"/>
+                                                    </constraint>
+                                                </constraints>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QbL-U8-TtD">
+                                                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="100" id="bGA-ei-0N2">
+                                                        <variation key="heightClass=regular-widthClass=regular" constant="200"/>
+                                                    </constraint>
+                                                    <constraint firstAttribute="width" constant="100" id="ep3-Zp-QOW">
+                                                        <variation key="heightClass=regular-widthClass=regular" constant="200"/>
+                                                    </constraint>
+                                                </constraints>
+                                                <connections>
+                                                    <action selector="buttonPhotoPressed:" destination="oDf-o9-tJq" eventType="touchUpInside" id="EKd-rX-twV"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="100" id="sa1-or-wVu"/>
-                                            <constraint firstAttribute="height" constant="100" id="tSM-ql-Ucu"/>
+                                            <constraint firstAttribute="width" constant="100" id="01G-0L-SWD">
+                                                <variation key="heightClass=regular-widthClass=regular" constant="200"/>
+                                            </constraint>
+                                            <constraint firstItem="QbL-U8-TtD" firstAttribute="centerX" secondItem="quv-3B-ci4" secondAttribute="centerX" id="AQL-AQ-9iP"/>
+                                            <constraint firstAttribute="height" constant="100" id="Izu-4c-VMz">
+                                                <variation key="heightClass=regular-widthClass=regular" constant="200"/>
+                                            </constraint>
+                                            <constraint firstItem="QbL-U8-TtD" firstAttribute="centerY" secondItem="quv-3B-ci4" secondAttribute="centerY" id="VyN-ED-FfF"/>
+                                            <constraint firstItem="vf6-ce-MMo" firstAttribute="centerY" secondItem="quv-3B-ci4" secondAttribute="centerY" id="kdM-vp-Sll"/>
+                                            <constraint firstItem="vf6-ce-MMo" firstAttribute="centerX" secondItem="quv-3B-ci4" secondAttribute="centerX" id="n6h-zX-xmU"/>
                                         </constraints>
-                                        <variation key="heightClass=compact" misplaced="YES">
-                                            <rect key="frame" x="210" y="110" width="100" height="30"/>
-                                        </variation>
-                                        <connections>
-                                            <action selector="buttonPhotoPressed:" destination="oDf-o9-tJq" eventType="touchUpInside" id="EKd-rX-twV"/>
-                                        </connections>
-                                    </button>
+                                    </view>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PAF-mY-g9h">
-                                        <rect key="frame" x="0.0" y="220" width="520" height="60"/>
+                                        <rect key="frame" x="0.0" y="110" width="520" height="60"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="coW-qz-WDU">
                                                 <variation key="heightClass=compact" constant="40"/>
@@ -744,9 +764,7 @@
                                     </textField>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="QbL-U8-TtD" firstAttribute="centerY" secondItem="vf6-ce-MMo" secondAttribute="centerY" id="LlM-bT-bVK"/>
                                     <constraint firstAttribute="trailing" secondItem="PAF-mY-g9h" secondAttribute="trailing" id="eAk-sX-gCX"/>
-                                    <constraint firstItem="QbL-U8-TtD" firstAttribute="centerX" secondItem="vf6-ce-MMo" secondAttribute="centerX" id="qR3-uT-ot8"/>
                                     <constraint firstItem="PAF-mY-g9h" firstAttribute="leading" secondItem="Ng1-V0-O19" secondAttribute="leading" id="y7y-pa-XBU"/>
                                 </constraints>
                                 <variation key="heightClass=compact" misplaced="YES">
@@ -754,7 +772,7 @@
                                 </variation>
                             </stackView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="8Q6-85-4p4">
-                                <rect key="frame" x="20" y="342" width="560" height="158"/>
+                                <rect key="frame" x="20" y="232" width="560" height="268"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="bal-61-sLX">
                                     <size key="itemSize" width="50" height="50"/>
@@ -775,6 +793,9 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
+                                                    <variation key="heightClass=regular-widthClass=regular">
+                                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                    </variation>
                                                 </label>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -826,7 +847,6 @@
                             <constraint firstItem="Ncb-xP-oFm" firstAttribute="top" secondItem="KtN-GK-DeV" secondAttribute="bottom" constant="-64" id="hDm-nY-cXR"/>
                             <constraint firstItem="8Q6-85-4p4" firstAttribute="trailing" secondItem="atm-Cf-7i0" secondAttribute="trailingMargin" id="hlr-sJ-8Tn"/>
                             <constraint firstItem="3ya-wk-bVL" firstAttribute="top" secondItem="8Q6-85-4p4" secondAttribute="bottom" constant="8" id="oMe-Yd-lYu"/>
-                            <constraint firstItem="3ya-wk-bVL" firstAttribute="centerX" secondItem="atm-Cf-7i0" secondAttribute="centerX" id="oZb-IX-ZhW"/>
                             <constraint firstItem="Ng1-V0-O19" firstAttribute="top" secondItem="KtN-GK-DeV" secondAttribute="bottom" constant="-22" id="tvb-tl-X9d"/>
                             <constraint firstItem="3ya-wk-bVL" firstAttribute="leading" secondItem="atm-Cf-7i0" secondAttribute="leadingMargin" id="yPF-hx-tiB"/>
                         </constraints>
@@ -842,6 +862,7 @@
                         <outlet property="buttonDone" destination="3ya-wk-bVL" id="Jxm-0V-y7O"/>
                         <outlet property="buttonPhoto" destination="QbL-U8-TtD" id="YT5-92-zpW"/>
                         <outlet property="collectionView" destination="8Q6-85-4p4" id="by5-xk-Obd"/>
+                        <outlet property="constraintTopStackView" destination="tvb-tl-X9d" id="C3n-VU-zhz"/>
                         <outlet property="imageView" destination="vf6-ce-MMo" id="uXw-lf-e25"/>
                         <outlet property="textField" destination="PAF-mY-g9h" id="zHr-Nl-JRw"/>
                     </connections>

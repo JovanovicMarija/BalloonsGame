@@ -9,12 +9,15 @@
 import UIKit
 import CoreData
 import AVFoundation
+import DeviceKit
 
 class AddChildViewController: UIViewController {
     
     var existingUser: User?
     
     // IBOutlets
+    @IBOutlet weak var constraintTopStackView: NSLayoutConstraint!
+
     @IBOutlet weak var textField: UITextField! {
         didSet {
             textField.delegate = self
@@ -27,7 +30,11 @@ class AddChildViewController: UIViewController {
     
     @IBOutlet weak var imageView: UIImageView! {
         didSet{
-            imageView.layer.cornerRadius = imageView.frame.size.height/2
+            if UIDevice.currentDevice().userInterfaceIdiom == .Phone {
+                imageView.layer.cornerRadius = 50
+            } else {
+                imageView.layer.cornerRadius = 100
+            }
             imageView.clipsToBounds = true
         }
     }
@@ -56,6 +63,14 @@ class AddChildViewController: UIViewController {
         }
         
         return ret > 44 ? ret : 44
+    }()
+    
+    let height: CGFloat = {
+        if UIDevice.currentDevice().userInterfaceIdiom == .Phone {
+            return 44
+        } else {
+            return 66
+        }
     }()
     
     var changesMade = false // TODO: - sredi i za editovanje zvukova
@@ -91,15 +106,29 @@ class AddChildViewController: UIViewController {
     
     // MARK: - Notifications
     func addObservers() {
-        let notificationCenter = NSNotificationCenter.defaultCenter()
-        notificationCenter.addObserver(self, selector: #selector(adjustForKeyboard), name: UIKeyboardWillHideNotification, object: nil)
-        notificationCenter.addObserver(self, selector: #selector(adjustForKeyboard), name: UIKeyboardWillChangeFrameNotification, object: nil)
+        let device = Device()
+
+        if device == .iPhone4 || device == .iPhone4s ||
+            device == .iPhone5 || device == .iPhone5c || device == .iPhone5s ||
+        device == .Simulator(.iPhone4) || device == .Simulator(.iPhone4s) ||
+        device == .Simulator(.iPhone5) || device == .Simulator(.iPhone5c) || device == .Simulator(.iPhone5s) {
+            let notificationCenter = NSNotificationCenter.defaultCenter()
+            notificationCenter.addObserver(self, selector: #selector(adjustForKeyboard), name: UIKeyboardWillHideNotification, object: nil)
+            notificationCenter.addObserver(self, selector: #selector(adjustForKeyboard), name: UIKeyboardWillChangeFrameNotification, object: nil)
+        }
     }
     
     func removeObservers() {
-        let notificationCenter = NSNotificationCenter.defaultCenter()
-        notificationCenter.removeObserver(self, name: UIKeyboardWillChangeFrameNotification, object: nil)
-        notificationCenter.removeObserver(self, name: UIKeyboardWillHideNotification, object: nil)
+        let device = Device()
+        
+        if device == .iPhone4 || device == .iPhone4s ||
+            device == .iPhone5 || device == .iPhone5c || device == .iPhone5s ||
+            device == .Simulator(.iPhone4) || device == .Simulator(.iPhone4s) ||
+            device == .Simulator(.iPhone5) || device == .Simulator(.iPhone5c) || device == .Simulator(.iPhone5s) {
+            let notificationCenter = NSNotificationCenter.defaultCenter()
+            notificationCenter.removeObserver(self, name: UIKeyboardWillChangeFrameNotification, object: nil)
+            notificationCenter.removeObserver(self, name: UIKeyboardWillHideNotification, object: nil)
+        }
     }
     
     func adjustForKeyboard(notification: NSNotification) {
@@ -108,15 +137,14 @@ class AddChildViewController: UIViewController {
             let curve = userInfo[UIKeyboardAnimationCurveUserInfoKey] as! NSNumber
             let keyboardScreenEndFrame = (userInfo[UIKeyboardFrameEndUserInfoKey] as! NSValue).CGRectValue()
             let keyboardViewEndFrame = self.view.convertRect(keyboardScreenEndFrame, fromView: self.view.window)
-            let heightBottomConstraint = notification.name == UIKeyboardWillHideNotification ? 0 : -keyboardViewEndFrame.height
+            let heightBottomConstraint: CGFloat = notification.name == UIKeyboardWillHideNotification ? -22 : (UIDevice.currentDevice().orientation == .Portrait ? -22 : -64)
             
             UIView.animateWithDuration(duration.doubleValue,
                                        delay: 0,
                                        options: UIViewAnimationOptions(rawValue: UInt(curve.integerValue << 16)),
                                        animations: { () in
                                         // text view
-//                                        self.bottomConstraint.constant = heightBottomConstraint
-                                        
+                                        self.constraintTopStackView.constant = heightBottomConstraint                                        
                                         self.view.layoutIfNeeded()
                 },
                                        completion: nil
@@ -343,7 +371,7 @@ extension AddChildViewController: UICollectionViewDelegateFlowLayout {
                         layout collectionViewLayout: UICollectionViewLayout,
                                sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
         
-        return CGSize(width: cellSize, height: 44)
+        return CGSize(width: cellSize, height: height)
     }
 }
 

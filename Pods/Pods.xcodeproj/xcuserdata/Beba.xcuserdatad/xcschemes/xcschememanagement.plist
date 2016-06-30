@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>DeviceKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>FSCalendar.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -27,22 +32,27 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>1DCE1926FDC9FCF15DBC7380821D5B30</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>33DC1EF8AFBEED2AC941C547BBC14F31</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>B2619B2813D910DBC9FE9714E0788D55</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>E1225DF74542B399EE152EDA64D2634B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>EBC27C466AB81E73B292269D1F2B7EF2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>EF78824223C74AA13AE655CD2ACF32A3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F90C4B1FC9CF58EA7CD5ACA85B114391</key>
 		<dict>
 			<key>primary</key>
 			<true/>
