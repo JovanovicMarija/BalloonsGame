@@ -22,18 +22,23 @@ class TutorialViewController: UIViewController {
         let frame = CGRectMake(0, 0, self.view.frame.width, self.view.frame.height)
         let frameView = CGRectMake(0, 0, self.view.frame.width, self.view.frame.height)
 
-        let panel1 = MYIntroductionPanel(frame: frame, title: "title", description: "description", image: UIImage(named: "background")!)
-        let panel2 = MYIntroductionPanel(frame: frame, title: "title", description: "description", image: UIImage(named: "background")!)
-        let panel3 = MYIntroductionPanel(frame: frame, title: "title", description: "description", image: UIImage(named: "background")!)
+        let sufix = UIDevice.currentDevice().userInterfaceIdiom == .Pad ? "iPad" : ""
+        
+        //Add panels to an array
+        var panels = [MYIntroductionPanel]()
+        for i in 0...1 {
+            let imageName = "tutorial\(i)"+sufix
+            let panel = MYIntroductionPanel(frame: frame, title: NSLocalizedString("Title\(i)", comment: "Title"), description: NSLocalizedString("Description\(i)", comment: "Description"), image: UIImage(named: imageName)!)
+            panel.PanelImageView.contentMode = .ScaleAspectFit
+
+            panels.append(panel)
+        }
         
         
         //Create the introduction view and set its delegate
         let introductionView = MYBlurIntroductionView(frame: frameView)
         introductionView.delegate = self
         introductionView.backgroundColor = UIColor.mainColor()
-        
-        //Add panels to an array
-        let panels = [panel1, panel2, panel3]
         
         //Build the introduction with desired panels
         introductionView.buildIntroductionWithPanels(panels)

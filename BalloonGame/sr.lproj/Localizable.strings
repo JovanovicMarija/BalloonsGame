@@ -57,3 +57,12 @@ AlertMessagePhoto = "Izaberite fotografiju";
 ActionTakePhoto = "Uslikajte";
 
 ActionChooseFromLibrary = "Izaberite iz albuma";
+
+Title0 = "Početni ekran";
+
+Description0 = "Kliknite na \"Nova igra\" da započnete igru za igrača čije ime vidite na ekranu. \nUkoliko želite da promenite igrača ili želite da napravite novog igrača, kliknite na \"Izaberi drugog igača\".";
+
+Title1 = "Izaberite igru";
+
+Description1 = "Izaberite koji tip igre želite da Vaš igrač igra.";
+

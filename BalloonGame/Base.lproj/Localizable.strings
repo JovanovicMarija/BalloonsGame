@@ -57,3 +57,12 @@ AlertMessagePhoto = "Choose a photo";
 ActionTakePhoto = "Take a photo";
 
 ActionChooseFromLibrary = "Choose from library";
+
+Title0 = "Welcome screen";
+
+Description0 = "Click on \"New game\" to play a game with user whose name you see on screen. \nIf you wish another player to play a game or you want to create new player, click on \"Pick another player\".";
+
+Title1 = "Choose a game";
+
+Description1 = "Choose which type of game you want user to play.";
+

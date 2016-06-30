@@ -105,6 +105,10 @@
 		85CAFDEB1D2270730016BBE2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85CAFDEA1D2270730016BBE2 /* Assets.xcassets */; };
 		85CAFDEE1D2270730016BBE2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85CAFDEC1D2270730016BBE2 /* LaunchScreen.storyboard */; };
 		85E7B62B1D2527D600D8DF1D /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E7B62A1D2527D600D8DF1D /* TutorialViewController.swift */; };
+		85F2732C1D25D53900585692 /* tutorial0.png in Resources */ = {isa = PBXBuildFile; fileRef = 85F2732E1D25D53900585692 /* tutorial0.png */; };
+		85F273321D25D99200585692 /* tutorial1.png in Resources */ = {isa = PBXBuildFile; fileRef = 85F273341D25D99200585692 /* tutorial1.png */; };
+		85F273381D25DF4C00585692 /* tutorial0iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = 85F2733A1D25DF4C00585692 /* tutorial0iPad.png */; };
+		85F2733E1D25E0BD00585692 /* tutorial1iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = 85F273401D25E0BD00585692 /* tutorial1iPad.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -212,6 +216,14 @@
 		85CAFDED1D2270730016BBE2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		85CAFDEF1D2270730016BBE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		85E7B62A1D2527D600D8DF1D /* TutorialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
+		85F2732D1D25D53900585692 /* sr */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sr; path = sr.lproj/tutorial0.png; sourceTree = "<group>"; };
+		85F2732F1D25D53F00585692 /* Base */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Base; path = Base.lproj/tutorial0.png; sourceTree = "<group>"; };
+		85F273331D25D99200585692 /* sr */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sr; path = sr.lproj/tutorial1.png; sourceTree = "<group>"; };
+		85F273351D25D99600585692 /* Base */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Base; path = Base.lproj/tutorial1.png; sourceTree = "<group>"; };
+		85F273391D25DF4C00585692 /* sr */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sr; path = sr.lproj/tutorial0iPad.png; sourceTree = "<group>"; };
+		85F2733B1D25DF5000585692 /* Base */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Base; path = Base.lproj/tutorial0iPad.png; sourceTree = "<group>"; };
+		85F2733F1D25E0BD00585692 /* Base */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Base; path = Base.lproj/tutorial1iPad.png; sourceTree = "<group>"; };
+		85F273411D25E0C000585692 /* sr */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sr; path = sr.lproj/tutorial1iPad.png; sourceTree = "<group>"; };
 		A8DEF9CA226F468849856C9F /* Pods-BalloonGame.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BalloonGame.release.xcconfig"; path = "Pods/Target Support Files/Pods-BalloonGame/Pods-BalloonGame.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -432,6 +444,7 @@
 		85CAFDDF1D2270720016BBE2 /* BalloonGame */ = {
 			isa = PBXGroup;
 			children = (
+				85F273291D25D46000585692 /* Tutorial Images */,
 				8573DF711D227B2E00DF2C1F /* Assets.xcassets */,
 				8573DF721D227B2E00DF2C1F /* BalloonGame.xcdatamodeld */,
 				8573DF741D227B2E00DF2C1F /* Base.lproj */,
@@ -453,6 +466,17 @@
 				851FC0641D2288AA00553C1D /* Localizable.strings */,
 			);
 			path = BalloonGame;
+			sourceTree = "<group>";
+		};
+		85F273291D25D46000585692 /* Tutorial Images */ = {
+			isa = PBXGroup;
+			children = (
+				85F2733A1D25DF4C00585692 /* tutorial0iPad.png */,
+				85F2732E1D25D53900585692 /* tutorial0.png */,
+				85F273401D25E0BD00585692 /* tutorial1iPad.png */,
+				85F273341D25D99200585692 /* tutorial1.png */,
+			);
+			path = "Tutorial Images";
 			sourceTree = "<group>";
 		};
 		B389CB3412AA951E8EEA02EC /* Frameworks */ = {
@@ -530,6 +554,8 @@
 				8573E01D1D227B2E00DF2C1F /* v.m4a in Resources */,
 				8573E0121D227B2E00DF2C1F /* k.m4a in Resources */,
 				8573E00E1D227B2E00DF2C1F /* g.m4a in Resources */,
+				85F2732C1D25D53900585692 /* tutorial0.png in Resources */,
+				85F273381D25DF4C00585692 /* tutorial0iPad.png in Resources */,
 				8573E0381D227B2E00DF2C1F /* win.m4a in Resources */,
 				8573E00A1D227B2E00DF2C1F /* c.m4a in Resources */,
 				8573E00B1D227B2E00DF2C1F /* d.m4a in Resources */,
@@ -546,6 +572,7 @@
 				85BB769B1D2282A200083AD0 /* Statistics.storyboard in Resources */,
 				8573E0351D227B2E00DF2C1F /* tin.m4a in Resources */,
 				8573E0101D227B2E00DF2C1F /* i.m4a in Resources */,
+				85F2733E1D25E0BD00585692 /* tutorial1iPad.png in Resources */,
 				8573E00F1D227B2E00DF2C1F /* h.m4a in Resources */,
 				8573E0041D227B2E00DF2C1F /* gameSong2.mp3 in Resources */,
 				8573E0251D227B2E00DF2C1F /* dog.m4a in Resources */,
@@ -571,6 +598,7 @@
 				8573E01B1D227B2E00DF2C1F /* t.m4a in Resources */,
 				8573E03A1D227B2E00DF2C1F /* yellow.m4a in Resources */,
 				8573E0111D227B2E00DF2C1F /* j.m4a in Resources */,
+				85F273321D25D99200585692 /* tutorial1.png in Resources */,
 				8573E0171D227B2E00DF2C1F /* p.m4a in Resources */,
 				8573DFE31D227B2E00DF2C1F /* Main.storyboard in Resources */,
 				8573DFEA1D227B2E00DF2C1F /* GameScene.sks in Resources */,
@@ -743,6 +771,42 @@
 				85CAFDED1D2270730016BBE2 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		85F2732E1D25D53900585692 /* tutorial0.png */ = {
+			isa = PBXVariantGroup;
+			children = (
+				85F2732D1D25D53900585692 /* sr */,
+				85F2732F1D25D53F00585692 /* Base */,
+			);
+			name = tutorial0.png;
+			sourceTree = "<group>";
+		};
+		85F273341D25D99200585692 /* tutorial1.png */ = {
+			isa = PBXVariantGroup;
+			children = (
+				85F273331D25D99200585692 /* sr */,
+				85F273351D25D99600585692 /* Base */,
+			);
+			name = tutorial1.png;
+			sourceTree = "<group>";
+		};
+		85F2733A1D25DF4C00585692 /* tutorial0iPad.png */ = {
+			isa = PBXVariantGroup;
+			children = (
+				85F273391D25DF4C00585692 /* sr */,
+				85F2733B1D25DF5000585692 /* Base */,
+			);
+			name = tutorial0iPad.png;
+			sourceTree = "<group>";
+		};
+		85F273401D25E0BD00585692 /* tutorial1iPad.png */ = {
+			isa = PBXVariantGroup;
+			children = (
+				85F2733F1D25E0BD00585692 /* Base */,
+				85F273411D25E0C000585692 /* sr */,
+			);
+			name = tutorial1iPad.png;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
