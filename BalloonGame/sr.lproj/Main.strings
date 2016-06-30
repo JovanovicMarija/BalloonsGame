@@ -20,6 +20,9 @@
 /* Class = "UILabel"; text = "Users"; ObjectID = "ESs-C5-sMa"; */
 "ESs-C5-sMa.text" = "Korisnici";
 
+/* Class = "UILabel"; text = "Tutorial"; ObjectID = "Z0m-Sl-0ut"; */
+"Z0m-Sl-0ut.text" = "Uputstvo";
+
 /* Class = "UIButton"; normalTitle = "Basic"; ObjectID = "LbP-hw-Idt"; */
 "LbP-hw-Idt.normalTitle" = "Osnovna igra";
 

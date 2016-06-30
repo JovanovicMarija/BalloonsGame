@@ -1024,8 +1024,12 @@
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="knt-Ji-qSg">
                                         <rect key="frame" x="0.0" y="0.0" width="48" height="64"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="48" id="IQ7-ex-rMt"/>
-                                            <constraint firstAttribute="height" constant="64" id="dse-5N-FzF"/>
+                                            <constraint firstAttribute="width" constant="48" id="IQ7-ex-rMt">
+                                                <variation key="heightClass=regular-widthClass=regular" constant="72"/>
+                                            </constraint>
+                                            <constraint firstAttribute="height" constant="64" id="dse-5N-FzF">
+                                                <variation key="heightClass=regular-widthClass=regular" constant="96"/>
+                                            </constraint>
                                         </constraints>
                                         <variation key="heightClass=regular-widthClass=regular" ambiguous="YES">
                                             <rect key="frame" x="0.0" y="0.0" width="48" height="64"/>
@@ -1034,8 +1038,12 @@
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MtX-5B-Jh1">
                                         <rect key="frame" x="56" y="0.0" width="48" height="64"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="48" id="9Uc-WF-Z6B"/>
-                                            <constraint firstAttribute="height" constant="64" id="ffy-FS-Bgj"/>
+                                            <constraint firstAttribute="width" constant="48" id="9Uc-WF-Z6B">
+                                                <variation key="heightClass=regular-widthClass=regular" constant="72"/>
+                                            </constraint>
+                                            <constraint firstAttribute="height" constant="64" id="ffy-FS-Bgj">
+                                                <variation key="heightClass=regular-widthClass=regular" constant="96"/>
+                                            </constraint>
                                         </constraints>
                                         <variation key="heightClass=regular-widthClass=regular" ambiguous="YES">
                                             <rect key="frame" x="56" y="0.0" width="48" height="64"/>
@@ -1044,8 +1052,12 @@
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3Rq-J3-dwL">
                                         <rect key="frame" x="112" y="0.0" width="48" height="64"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="64" id="Cvh-ry-SZv"/>
-                                            <constraint firstAttribute="width" constant="48" id="mZi-Uv-N8h"/>
+                                            <constraint firstAttribute="height" constant="64" id="Cvh-ry-SZv">
+                                                <variation key="heightClass=regular-widthClass=regular" constant="96"/>
+                                            </constraint>
+                                            <constraint firstAttribute="width" constant="48" id="mZi-Uv-N8h">
+                                                <variation key="heightClass=regular-widthClass=regular" constant="72"/>
+                                            </constraint>
                                         </constraints>
                                         <variation key="heightClass=regular-widthClass=regular" ambiguous="YES">
                                             <rect key="frame" x="112" y="0.0" width="48" height="64"/>
