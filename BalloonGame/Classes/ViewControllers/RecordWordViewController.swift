@@ -131,7 +131,6 @@ class RecordWordViewController: UIViewController, AVAudioRecorderDelegate {
 
 extension RecordWordViewController: UITextFieldDelegate {
     func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
-        print(range.length, range.location)
         return !NSEqualRanges(range, NSMakeRange(0, 1))
     }
 }

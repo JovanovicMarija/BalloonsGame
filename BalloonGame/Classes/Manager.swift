@@ -112,9 +112,23 @@ class Manager {
     }
     
     func stopSound() {
-        audioPlayerError?.stop()
-        audioPlayerLetter?.stop()
-        audioPlayerBackgroundMusic?.stop()
+        if let audioPlayerError = audioPlayerError {
+            if audioPlayerError.playing {
+                audioPlayerError.stop()
+            }
+        }
+        
+        if let audioPlayerLetter = audioPlayerLetter {
+            if audioPlayerLetter.playing {
+                audioPlayerLetter.stop()
+            }
+        }
+        
+        if let audioPlayerBackgroundMusic = audioPlayerBackgroundMusic {
+            if audioPlayerBackgroundMusic.playing {
+                audioPlayerBackgroundMusic.stop()
+            }
+        }
     }
 }
 
@@ -127,15 +141,13 @@ enum GameMode: Int {
 enum BalloonColor: String {
     case blue = "blue"
     case green = "green"
-    case lightGreen = "lightGreen"
-    case lightPurple = "lightPurple"
     case orange = "orange"
     case pink = "pink"
     case purple = "purple"
     case red = "red"
     case yellow = "yellow"
     
-    static let allValues = [blue, green, lightGreen, lightPurple, orange, pink, purple, red, yellow]
+    static let allValues = [blue, green, orange, pink, purple, red, yellow]
     
     static func randomWithWeight() -> BalloonColor {
 

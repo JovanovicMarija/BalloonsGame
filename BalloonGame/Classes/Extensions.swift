@@ -56,7 +56,7 @@ extension UIImage {
     func imageWithText(text: String) -> UIImage {
         // Setup the font specific variables
         let textColor: UIColor = UIColor.whiteColor()
-        let textFont: UIFont = UIFont(name: "Helvetica Bold", size: 100)! // TODO: - change
+        let textFont: UIFont = UIFont(name: "Helvetica Bold", size: 100)!
         
         //Setup the image context using the passed image.
         UIGraphicsBeginImageContext(self.size)
@@ -112,7 +112,7 @@ extension NSDate {
         let calendar = NSCalendar.currentCalendar()
         let dateComponents = calendar.components(.Year, fromDate: fromDate, toDate: toDate, options: [])
         let years = dateComponents.year
-        print("Years: \(years)")
+//        print("Years: \(years)")
         return years
     }
     
@@ -120,7 +120,7 @@ extension NSDate {
         let calendar = NSCalendar.currentCalendar()
         let dateComponents = calendar.components(.Month, fromDate: fromDate, toDate: toDate, options: [])
         let months = dateComponents.month
-        print("Months: \(months)")
+//        print("Months: \(months)")
         return months
     }
     
@@ -128,7 +128,7 @@ extension NSDate {
         let calendar = NSCalendar.currentCalendar()
         let dateComponents = calendar.components(.Day, fromDate: fromDate, toDate: toDate, options: [])
         let days = dateComponents.day
-        print("Days: \(days)")
+//        print("Days: \(days)")
         return days
     }
     
@@ -136,7 +136,7 @@ extension NSDate {
         let calendar = NSCalendar.currentCalendar()
         let dateComponents = calendar.components(.Hour, fromDate: fromDate, toDate: toDate, options: [])
         let hours = dateComponents.hour
-        print("Hours: \(hours)")
+//        print("Hours: \(hours)")
         return hours
     }
     
@@ -144,7 +144,7 @@ extension NSDate {
         let calendar = NSCalendar.currentCalendar()
         let dateComponents = calendar.components(.Minute, fromDate: fromDate, toDate: toDate, options: [])
         let minutes = dateComponents.minute
-        print("Minutes: \(minutes)")
+//        print("Minutes: \(minutes)")
         return minutes
     }
     
@@ -152,7 +152,7 @@ extension NSDate {
         let calendar = NSCalendar.currentCalendar()
         let dateComponents = calendar.components(.Second, fromDate: fromDate, toDate: toDate, options: [])
         let seconds = dateComponents.second
-        print("Seconds: \(seconds)")
+//        print("Seconds: \(seconds)")
         return seconds
     }
     

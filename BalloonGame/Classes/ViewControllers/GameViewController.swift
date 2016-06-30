@@ -15,14 +15,8 @@ class GameViewController: UIViewController {
     // IBOutlets
     @IBOutlet weak var labelPoints: UILabel!
     
-    @IBOutlet var imageViewCollection: [UIImageView]! {
-        didSet {
-            for image in imageViewCollection {
-                image.hidden = true
-            }
-        }
-    }
-    
+    @IBOutlet var imageViewCollection: [UIImageView]!
+        
     var game: Game = Game()
         
     var gameScene: GameScene?
@@ -146,14 +140,10 @@ extension GameViewController: TopViewDelegate {
     }
     
     func balloonImages(names: [BalloonColor]) {
-        for imageView in imageViewCollection {
-            imageView.hidden = true
-            imageView.alpha = 1.0
-        }
         
         for (index, name) in names.enumerate() {
-            imageViewCollection[index].hidden = false
             imageViewCollection[index].image = UIImage(named: name.rawValue)
+            imageViewCollection[index].alpha = 1.0
         }
     }
     
@@ -162,7 +152,7 @@ extension GameViewController: TopViewDelegate {
     }
     
     func disableBalloonAtIndex(index: Int) {
-        imageViewCollection[index].alpha = 0.5
+        imageViewCollection[index].alpha = 0.3
     }
     
     func removeBalloonWithID(id: String) {

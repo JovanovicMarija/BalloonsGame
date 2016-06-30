@@ -66,14 +66,7 @@ class TutorialViewController: UIViewController {
 
 extension TutorialViewController: MYIntroductionDelegate {
     func introduction(introductionView: MYBlurIntroductionView!, didFinishWithType finishType: MYFinishType) {
-        if finishType ==  MYFinishTypeSwipeOut {
-            print("MYFinishTypeSwipeOut")
-        } else if finishType == MYFinishTypeSkipButton {
-            print("MYFinishTypeSkipButton")
-        }
-
         introductionView.BackgroundImageView.image = UIImage(named: "background")
         self.sideMenuViewController.presentLeftMenuViewController()
-        
     }
 }

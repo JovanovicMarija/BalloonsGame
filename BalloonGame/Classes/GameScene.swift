@@ -78,8 +78,6 @@ class GameScene: SKScene {
     
     func presentBalloon(balloon: Balloon) {
         
-//        let sprite = SKSpriteNode(imageNamed:balloon.color.rawValue)
-        
         let sprite: SKSpriteNode
         if let letter = balloon.letter {
             sprite = SKSpriteNode(texture: SKTexture(image: UIImage(named: balloon.color.rawValue)!.imageWithText(String(letter))))
@@ -87,8 +85,6 @@ class GameScene: SKScene {
             sprite = SKSpriteNode(texture: SKTexture(image: UIImage(named: balloon.color.rawValue)!))
         }
         
-        
-//        [self setTexture:[SKTexture textureWithImage:mergedImage]]
         sprite.name = balloon.id
         
         let randomX: CGFloat = CGFloat(arc4random_uniform(UInt32(UIScreen.mainScreen().bounds.size.width - sprite.size.width)))

@@ -53,7 +53,7 @@ class Game: BalloonProtocol {
     
     func missed() {
         self.misses.increment()
-        print("misses: ", self.misses)
+//        print("misses: ", self.misses)
         
         // play missed sound
         Manager.sharedInstance.playErrorSound()
