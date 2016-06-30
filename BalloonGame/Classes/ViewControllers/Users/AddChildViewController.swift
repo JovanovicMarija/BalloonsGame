@@ -63,6 +63,7 @@ class AddChildViewController: UIViewController {
     // MARK: - ViewController Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // collection view
         collectionView.delegate = self
         collectionView.dataSource = self

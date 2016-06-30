@@ -559,7 +559,7 @@
         <scene sceneID="XA4-Hs-PWz">
             <objects>
                 <tableViewController storyboardIdentifier="leftMenuViewController" id="XRZ-83-MII" customClass="LeftMenuViewController" customModule="BalloonGame" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="80" sectionHeaderHeight="28" sectionFooterHeight="28" id="mvL-BX-3Qg">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="75" sectionHeaderHeight="28" sectionFooterHeight="28" id="mvL-BX-3Qg">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -567,14 +567,14 @@
                             <tableViewSection id="dFn-dK-hf1">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" textLabel="uCf-CI-YZy" imageView="mju-WK-fDT" style="IBUITableViewCellStyleDefault" id="9ed-7I-nxa">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="80"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="75"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9ed-7I-nxa" id="eFG-y4-EAZ">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="80"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="75"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Games" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="uCf-CI-YZy">
-                                                    <rect key="frame" x="90" y="0.0" width="495" height="80"/>
+                                                    <rect key="frame" x="90" y="0.0" width="495" height="75"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="25"/>
@@ -585,7 +585,7 @@
                                                     </variation>
                                                 </label>
                                                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="menuGameLined" id="mju-WK-fDT">
-                                                    <rect key="frame" x="15" y="10" width="60" height="60"/>
+                                                    <rect key="frame" x="15" y="7" width="60" height="60"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </imageView>
                                             </subviews>
@@ -593,14 +593,14 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" textLabel="ESs-C5-sMa" imageView="ZiB-X6-7zO" style="IBUITableViewCellStyleDefault" id="QTM-nw-YdO">
-                                        <rect key="frame" x="0.0" y="80" width="600" height="80"/>
+                                        <rect key="frame" x="0.0" y="75" width="600" height="75"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="QTM-nw-YdO" id="OcJ-IO-CpZ">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="80"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="75"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Users" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ESs-C5-sMa">
-                                                    <rect key="frame" x="90" y="0.0" width="495" height="80"/>
+                                                    <rect key="frame" x="90" y="0.0" width="495" height="75"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="25"/>
@@ -611,7 +611,7 @@
                                                     </variation>
                                                 </label>
                                                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="menuUserLined" id="ZiB-X6-7zO">
-                                                    <rect key="frame" x="15" y="10" width="60" height="60"/>
+                                                    <rect key="frame" x="15" y="7" width="60" height="60"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </imageView>
                                             </subviews>
@@ -619,14 +619,14 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" textLabel="AWg-Va-OSJ" imageView="vbs-IC-ffD" style="IBUITableViewCellStyleDefault" id="ISO-I4-Zrk">
-                                        <rect key="frame" x="0.0" y="160" width="600" height="80"/>
+                                        <rect key="frame" x="0.0" y="150" width="600" height="75"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ISO-I4-Zrk" id="SZm-Gc-Cya">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="80"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="75"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Statistics" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="AWg-Va-OSJ">
-                                                    <rect key="frame" x="90" y="0.0" width="495" height="80"/>
+                                                    <rect key="frame" x="90" y="0.0" width="495" height="75"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="25"/>
@@ -637,7 +637,7 @@
                                                     </variation>
                                                 </label>
                                                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="menuStatisticsLined" id="vbs-IC-ffD">
-                                                    <rect key="frame" x="15" y="10" width="60" height="60"/>
+                                                    <rect key="frame" x="15" y="7" width="60" height="60"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </imageView>
                                             </subviews>
@@ -645,14 +645,14 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" textLabel="Z0m-Sl-0ut" imageView="dPO-Cp-NrT" style="IBUITableViewCellStyleDefault" id="NXQ-2J-fh6">
-                                        <rect key="frame" x="0.0" y="240" width="600" height="80"/>
+                                        <rect key="frame" x="0.0" y="225" width="600" height="75"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NXQ-2J-fh6" id="ZlF-48-Sr9">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="80"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="75"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Tutorial" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Z0m-Sl-0ut">
-                                                    <rect key="frame" x="110" y="0.0" width="475" height="80"/>
+                                                    <rect key="frame" x="90" y="0.0" width="495" height="75"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="25"/>
@@ -663,7 +663,7 @@
                                                     </variation>
                                                 </label>
                                                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="menuTutorialLined" id="dPO-Cp-NrT">
-                                                    <rect key="frame" x="15" y="0.0" width="80" height="80"/>
+                                                    <rect key="frame" x="15" y="7" width="60" height="60"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </imageView>
                                             </subviews>
@@ -699,7 +699,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Ng1-V0-O19">
-                                <rect key="frame" x="40" y="64" width="520" height="250"/>
+                                <rect key="frame" x="40" y="42" width="520" height="280"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="vf6-ce-MMo">
                                         <rect key="frame" x="210" y="0.0" width="100" height="100"/>
@@ -726,14 +726,20 @@
                                         </connections>
                                     </button>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PAF-mY-g9h">
-                                        <rect key="frame" x="0.0" y="220" width="520" height="30"/>
+                                        <rect key="frame" x="0.0" y="220" width="520" height="60"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="coW-qz-WDU"/>
+                                            <constraint firstAttribute="height" constant="60" id="coW-qz-WDU">
+                                                <variation key="heightClass=compact" constant="40"/>
+                                                <variation key="heightClass=regular-widthClass=compact" constant="40"/>
+                                            </constraint>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <variation key="heightClass=compact" misplaced="YES">
                                             <rect key="frame" x="0.0" y="150" width="520" height="30"/>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         </variation>
                                     </textField>
                                 </subviews>
@@ -748,7 +754,7 @@
                                 </variation>
                             </stackView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="8Q6-85-4p4">
-                                <rect key="frame" x="20" y="334" width="560" height="188"/>
+                                <rect key="frame" x="20" y="342" width="560" height="158"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="bal-61-sLX">
                                     <size key="itemSize" width="50" height="50"/>
@@ -785,15 +791,21 @@
                                 </cells>
                             </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ya-wk-bVL" customClass="RoundedButton" customModule="BalloonGame" customModuleProvider="target">
-                                <rect key="frame" x="20" y="530" width="560" height="50"/>
+                                <rect key="frame" x="20" y="508" width="560" height="72"/>
                                 <color key="backgroundColor" red="0.25098040700000002" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="BYy-Kx-DD5"/>
+                                    <constraint firstAttribute="height" constant="72" id="BYy-Kx-DD5">
+                                        <variation key="heightClass=compact" constant="50"/>
+                                        <variation key="heightClass=regular-widthClass=compact" constant="50"/>
+                                    </constraint>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="Finish &amp; Play">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" type="system" pointSize="42"/>
+                                </variation>
                                 <connections>
                                     <action selector="buttonDonePressed:" destination="oDf-o9-tJq" eventType="touchUpInside" id="4aE-4T-f2a"/>
                                     <segue destination="yCg-Ce-g5n" kind="show" id="ctL-zx-E2s"/>
@@ -815,7 +827,7 @@
                             <constraint firstItem="8Q6-85-4p4" firstAttribute="trailing" secondItem="atm-Cf-7i0" secondAttribute="trailingMargin" id="hlr-sJ-8Tn"/>
                             <constraint firstItem="3ya-wk-bVL" firstAttribute="top" secondItem="8Q6-85-4p4" secondAttribute="bottom" constant="8" id="oMe-Yd-lYu"/>
                             <constraint firstItem="3ya-wk-bVL" firstAttribute="centerX" secondItem="atm-Cf-7i0" secondAttribute="centerX" id="oZb-IX-ZhW"/>
-                            <constraint firstItem="Ng1-V0-O19" firstAttribute="top" secondItem="KtN-GK-DeV" secondAttribute="bottom" id="tvb-tl-X9d"/>
+                            <constraint firstItem="Ng1-V0-O19" firstAttribute="top" secondItem="KtN-GK-DeV" secondAttribute="bottom" constant="-22" id="tvb-tl-X9d"/>
                             <constraint firstItem="3ya-wk-bVL" firstAttribute="leading" secondItem="atm-Cf-7i0" secondAttribute="leadingMargin" id="yPF-hx-tiB"/>
                         </constraints>
                     </view>
@@ -1090,11 +1102,20 @@
                     <view key="view" contentMode="scaleToFill" id="N72-3R-cNE">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="6Sv-Pt-B35">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6Sv-Pt-B35" firstAttribute="leading" secondItem="N72-3R-cNE" secondAttribute="leadingMargin" constant="-20" id="Tsd-my-6Cy"/>
+                            <constraint firstItem="6Sv-Pt-B35" firstAttribute="top" secondItem="910-bf-hZv" secondAttribute="bottom" constant="-64" id="X4w-iz-ONc"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="6Sv-Pt-B35" secondAttribute="trailing" constant="-20" id="lIv-bj-5AT"/>
+                            <constraint firstItem="RaE-0a-8Eo" firstAttribute="top" secondItem="6Sv-Pt-B35" secondAttribute="bottom" id="rr3-ZV-Rtv"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Tbd-cA-jnC">
-                        <barButtonItem key="leftBarButtonItem" image="menu" id="m0p-yC-szg"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="Tbd-cA-jnC"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="36K-KW-cCi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1134,7 +1155,7 @@
         <image name="menu" width="44" height="44"/>
         <image name="menuGameLined" width="60" height="60"/>
         <image name="menuStatisticsLined" width="60" height="60"/>
-        <image name="menuTutorialLined" width="180" height="180"/>
+        <image name="menuTutorialLined" width="60" height="60"/>
         <image name="menuUserLined" width="60" height="60"/>
         <image name="placeholder" width="100" height="100"/>
     </resources>

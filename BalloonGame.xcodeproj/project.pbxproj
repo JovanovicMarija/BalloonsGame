@@ -98,13 +98,13 @@
 		8573E0391D227B2E00DF2C1F /* xylophone.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 8573DFDD1D227B2E00DF2C1F /* xylophone.m4a */; };
 		8573E03A1D227B2E00DF2C1F /* yellow.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 8573DFDE1D227B2E00DF2C1F /* yellow.m4a */; };
 		8573E03B1D227B2E00DF2C1F /* zebra.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 8573DFDF1D227B2E00DF2C1F /* zebra.m4a */; };
-		85A6BD6F1D24725700C94E10 /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A6BD6E1D24725700C94E10 /* TutorialViewController.swift */; };
 		85BB769B1D2282A200083AD0 /* Statistics.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85BB769D1D2282A200083AD0 /* Statistics.storyboard */; };
 		85CAFDE11D2270730016BBE2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85CAFDE01D2270730016BBE2 /* AppDelegate.swift */; };
 		85CAFDE61D2270730016BBE2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85CAFDE41D2270730016BBE2 /* Main.storyboard */; };
 		85CAFDE91D2270730016BBE2 /* BalloonGame.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 85CAFDE71D2270730016BBE2 /* BalloonGame.xcdatamodeld */; };
 		85CAFDEB1D2270730016BBE2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85CAFDEA1D2270730016BBE2 /* Assets.xcassets */; };
 		85CAFDEE1D2270730016BBE2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85CAFDEC1D2270730016BBE2 /* LaunchScreen.storyboard */; };
+		85E7B62B1D2527D600D8DF1D /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E7B62A1D2527D600D8DF1D /* TutorialViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -202,7 +202,6 @@
 		8573DFDD1D227B2E00DF2C1F /* xylophone.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = xylophone.m4a; sourceTree = "<group>"; };
 		8573DFDE1D227B2E00DF2C1F /* yellow.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = yellow.m4a; sourceTree = "<group>"; };
 		8573DFDF1D227B2E00DF2C1F /* zebra.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = zebra.m4a; sourceTree = "<group>"; };
-		85A6BD6E1D24725700C94E10 /* TutorialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
 		85BB769C1D2282A200083AD0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Statistics.storyboard; sourceTree = "<group>"; };
 		85BB769F1D2282AA00083AD0 /* sr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sr; path = sr.lproj/Statistics.strings; sourceTree = "<group>"; };
 		85CAFDDD1D2270720016BBE2 /* BalloonGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BalloonGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -212,6 +211,7 @@
 		85CAFDEA1D2270730016BBE2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		85CAFDED1D2270730016BBE2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		85CAFDEF1D2270730016BBE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		85E7B62A1D2527D600D8DF1D /* TutorialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
 		A8DEF9CA226F468849856C9F /* Pods-BalloonGame.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BalloonGame.release.xcconfig"; path = "Pods/Target Support Files/Pods-BalloonGame/Pods-BalloonGame.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -254,7 +254,6 @@
 				8573DF831D227B2E00DF2C1F /* GameScene.swift */,
 				8573DF841D227B2E00DF2C1F /* Manager.swift */,
 				8573DF851D227B2E00DF2C1F /* ViewControllers */,
-				85A6BD6E1D24725700C94E10 /* TutorialViewController.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -273,6 +272,7 @@
 		8573DF851D227B2E00DF2C1F /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				85E7B62A1D2527D600D8DF1D /* TutorialViewController.swift */,
 				8573DF861D227B2E00DF2C1F /* ChooseLevelViewController.swift */,
 				8573DF871D227B2E00DF2C1F /* GameViewController.swift */,
 				8573DF881D227B2E00DF2C1F /* LeftMenuViewController.swift */,
@@ -676,7 +676,7 @@
 				8573DFFB1D227B2E00DF2C1F /* RoundedButton.swift in Sources */,
 				8573DFF41D227B2E00DF2C1F /* StatisticsViewController.swift in Sources */,
 				8573DFFD1D227B2E00DF2C1F /* AudioWord.swift in Sources */,
-				85A6BD6F1D24725700C94E10 /* TutorialViewController.swift in Sources */,
+				85E7B62B1D2527D600D8DF1D /* TutorialViewController.swift in Sources */,
 				8573DFF71D227B2E00DF2C1F /* AllChildrenTableViewCell.swift in Sources */,
 				8573DFF31D227B2E00DF2C1F /* DailyStatisticsViewController.swift in Sources */,
 				8573DFEC1D227B2E00DF2C1F /* Manager.swift in Sources */,
@@ -842,6 +842,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = rs.etf.BalloonGame;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -854,6 +855,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = rs.etf.BalloonGame;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

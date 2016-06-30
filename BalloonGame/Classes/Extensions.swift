@@ -180,3 +180,17 @@ extension UITableView {
         }
     }
 }
+
+extension UINavigationController {
+    public override func shouldAutorotate() -> Bool {
+        if visibleViewController is TutorialViewController {
+            return false
+        } else {
+            return true
+        }
+    }
+    
+    public override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
+        return (visibleViewController?.supportedInterfaceOrientations())!
+    }
+}

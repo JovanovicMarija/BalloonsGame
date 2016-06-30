@@ -13,20 +13,22 @@ class TutorialViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
     }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
-        let frame = CGRectMake(0, 64, self.view.frame.width, self.view.frame.height-64)
+        let frame = CGRectMake(0, 0, self.view.frame.width, self.view.frame.height)
+        let frameView = CGRectMake(0, 0, self.view.frame.width, self.view.frame.height)
+
         let panel1 = MYIntroductionPanel(frame: frame, title: "title", description: "description", image: UIImage(named: "background")!)
         let panel2 = MYIntroductionPanel(frame: frame, title: "title", description: "description", image: UIImage(named: "background")!)
         let panel3 = MYIntroductionPanel(frame: frame, title: "title", description: "description", image: UIImage(named: "background")!)
         
         
-        
         //Create the introduction view and set its delegate
-        let introductionView = MYBlurIntroductionView(frame: frame)
+        let introductionView = MYBlurIntroductionView(frame: frameView)
         introductionView.delegate = self
         introductionView.backgroundColor = UIColor.mainColor()
         
@@ -43,7 +45,7 @@ class TutorialViewController: UIViewController {
     override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
         return UIInterfaceOrientationMask.Portrait
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -63,5 +65,15 @@ class TutorialViewController: UIViewController {
 }
 
 extension TutorialViewController: MYIntroductionDelegate {
-    
+    func introduction(introductionView: MYBlurIntroductionView!, didFinishWithType finishType: MYFinishType) {
+        if finishType ==  MYFinishTypeSwipeOut {
+            print("MYFinishTypeSwipeOut")
+        } else if finishType == MYFinishTypeSkipButton {
+            print("MYFinishTypeSkipButton")
+        }
+
+        introductionView.BackgroundImageView.image = UIImage(named: "background")
+        self.sideMenuViewController.presentLeftMenuViewController()
+        
+    }
 }

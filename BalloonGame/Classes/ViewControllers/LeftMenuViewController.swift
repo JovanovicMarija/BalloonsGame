@@ -20,7 +20,14 @@ class LeftMenuViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let inset: UIEdgeInsets = UIEdgeInsetsMake(50, 0, 0, 0) // TODO: - sredi
+        let inset: UIEdgeInsets
+        
+        if UIDevice.currentDevice().userInterfaceIdiom == .Phone {
+            inset = UIEdgeInsetsMake(20, 0, 0, 0)
+        } else {
+            inset = UIEdgeInsetsMake(50, 0, 0, 0)
+        }
+        
         self.tableView.contentInset = inset
 
         tableView.backgroundColor = UIColor.mainColor()
@@ -110,6 +117,14 @@ class LeftMenuViewController: UITableViewController {
             self.sideMenuViewController.hideMenuViewController()
         default:
             return
+        }
+    }
+    
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        if UIDevice.currentDevice().userInterfaceIdiom == .Phone {
+            return 75
+        } else {
+            return 100
         }
     }
     
