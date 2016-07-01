@@ -16,7 +16,12 @@ class RecordWordViewController: UIViewController, AVAudioRecorderDelegate {
     // IBOutlet
     @IBOutlet weak var labelTime: UILabel!
     
-    @IBOutlet weak var textField: UITextField!
+    @IBOutlet weak var textField: UITextField! {
+        didSet {
+            textField.delegate = self
+            textField.text = String(letter)
+        }
+    }
     
     @IBOutlet weak var buttonPlay: UIButton! {
         didSet {
@@ -35,13 +40,8 @@ class RecordWordViewController: UIViewController, AVAudioRecorderDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.backgroundColor = UIColor.clearColor()
+        view.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.5)
         view.opaque = false
-        
-        // text view
-        textField.delegate = self
-        textField.text = String(letter)
-        textField.becomeFirstResponder()
         
         // audio
         recordingSession = AVAudioSession.sharedInstance()
@@ -62,6 +62,13 @@ class RecordWordViewController: UIViewController, AVAudioRecorderDelegate {
             // TODO: - failed to record!
         }
     }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        // text view
+        textField.becomeFirstResponder()
+
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -80,6 +87,16 @@ class RecordWordViewController: UIViewController, AVAudioRecorderDelegate {
             finishRecording(success: true)
         }
     }
+    
+    
+    @IBAction func buttonAccept(sender: AnyObject) {
+    }
+    
+    @IBAction func buttonCancel(sender: AnyObject) {
+        textField.resignFirstResponder()
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
     
     // MARK: - audio
     func getDocumentsDirectory() -> NSString {
