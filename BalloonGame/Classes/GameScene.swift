@@ -53,16 +53,16 @@ class GameScene: SKScene {
         let beginX: CGFloat
         let endX: CGFloat
         
-        let randomClouds: Int = Int.randomNumberBetween(0, and: 1)
-        if randomClouds == 1 {
-            beginX = maxFromHeightAndWidth+cloud.size.height/2
+        let randomDirection: Int = Int.randomNumberBetween(0, and: 1)
+        if randomDirection == 1 {
+            beginX = maxFromHeightAndWidth + cloud.size.height
             endX = 0-cloud.size.height
         } else {
             beginX = 0-cloud.size.height
-            endX = maxFromHeightAndWidth+cloud.size.height/2
+            endX = maxFromHeightAndWidth + cloud.size.height
         }
         
-        let randomYAxix: CGFloat = CGFloat(Int.randomNumberBetween(0, and: Int(maxFromHeightAndWidth)))
+        let randomYAxix: CGFloat = CGFloat(Int.randomNumberBetween(0, and: Int(UIScreen.mainScreen().bounds.size.height)))
         cloud.position = CGPointMake(beginX, randomYAxix)
         // clouds are sometimes above sky and below balloons
         //        and sometimes above sky and above balloons
@@ -88,8 +88,7 @@ class GameScene: SKScene {
         sprite.name = balloon.id
         
         let randomX: CGFloat = CGFloat(arc4random_uniform(UInt32(UIScreen.mainScreen().bounds.size.width - sprite.size.width)))
-        let y: CGFloat = maxFromHeightAndWidth + sprite.size.height
-        sprite.position = CGPointMake(sprite.size.width/2 + randomX, -sprite.size.height)
+        sprite.position = CGPointMake(sprite.size.width/2 + randomX, -sprite.size.height/2)
         
         // balloons are sometimes above sky and below clouds
         //          and sometimes above sky and above clouds
@@ -97,6 +96,7 @@ class GameScene: SKScene {
         
         let randomDuration: NSTimeInterval = NSTimeInterval(Int.randomNumberBetween(9, and: 19))
 
+        let y: CGFloat = maxFromHeightAndWidth + sprite.size.height/2
         let action = SKAction.moveToY(y, duration: randomDuration)
         let actionRemove = SKAction.removeFromParent()
         sprite.runAction(SKAction.sequence([action, actionRemove]))

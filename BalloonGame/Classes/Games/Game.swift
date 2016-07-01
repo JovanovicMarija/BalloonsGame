@@ -36,10 +36,13 @@ class Game: BalloonProtocol {
     var level: Int = 0 {
         didSet {
             if level < 10 {
-                Manager.sharedInstance.delegatePointsUpdater?.speedUpWithNewSpeed(10.0)
+                speed-=0.1
+                Manager.sharedInstance.delegatePointsUpdater?.speedUpWithNewSpeed(speed)
             }
         }
     }
+    
+    private var speed = 2.0
     
     var duration: NSTimeInterval = 0
     

@@ -154,16 +154,16 @@ enum BalloonColor: String {
 
         if Manager.sharedInstance.gameMode == .Colors {
             var weight: [BalloonColor: Int] = [BalloonColor: Int]()
-            let count = 3+BalloonColor.allValues.count
-//            let singleWeight = 1/count
             for color in BalloonColor.allValues {
                 weight[color] = 1 //singleWeight
             }
             
+            // increase weight of current color
             let currentIndex = (Manager.sharedInstance.currentGame as! GameColors).currentBalloonIndex
-            weight[(Manager.sharedInstance.currentGame as! GameColors).assignedColors[currentIndex]]!+=4
+            weight[(Manager.sharedInstance.currentGame as! GameColors).assignedColors[currentIndex]]!+=3
             
-            
+            // return weightSum
+            let count = 3+BalloonColor.allValues.count
             let randomIndex = Int(arc4random_uniform(UInt32(count)))
             var weightSum = 0
             for color in BalloonColor.allValues {
@@ -172,31 +172,6 @@ enum BalloonColor: String {
                     return color
                 }
             }
-            
-//            var rand = function(min, max) {
-//                return Math.random() * (max - min) + min;
-//            };
-//            
-//            var getRandomItem = function(list, weight) {
-//                var total_weight = weight.reduce(function (prev, cur, i, arr) {
-//                    return prev + cur;
-//                    });
-//                
-//                var random_num = rand(0, total_weight);
-//                var weight_sum = 0;
-//                //console.log(random_num)
-//                
-//                for (var i = 0; i < list.length; i++) {
-//                    weight_sum += weight[i];
-//                    weight_sum = +weight_sum.toFixed(2);
-//                    
-//                    if (random_num <= weight_sum) {
-//                        return list[i];
-//                    }
-//                }
-//                
-//                // end of function
-//            };
         } else {
             let count = BalloonColor.allValues.count
             let randomIndex = Int(arc4random_uniform(UInt32(count)))

@@ -72,7 +72,7 @@ Description1 = "Choose which type of game you want user to play.";
 
 Title2 = "Basic game";
 
-Description2 = "Touch balloon to make it explode. Each balloon will give you one point.\nIf balloon is below a cloud, it cannot be reached.";
+Description2 = "Touch balloon to make it explode. Each balloon will give you one point. During the time, balloons will appear more frequently.\nIf balloon is below a cloud, it cannot be reached.";
 
 Title3 = "Color Game";
 

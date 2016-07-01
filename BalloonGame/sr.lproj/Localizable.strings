@@ -72,7 +72,7 @@ Description1 = "Izaberite koji tip igre želite da Vaš igrač igra.";
 
 Title2 = "Osnovna igra";
 
-Description2 = "Dodirnite balon kako bi eksplodirao. Svaki balon donosi jedan poen.\nAko je balon ispod oblaka, ne možete ga probušiti.";
+Description2 = "Dodirnite balon kako bi eksplodirao. Svaki balon donosi jedan poen. Postepeno, baloni će se pojavljivati sve češće.\nAko je balon ispod oblaka, ne možete ga probušiti.";
 
 Title3 = "Igra sa bojama";
 
