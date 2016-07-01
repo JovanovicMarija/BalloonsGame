@@ -26,7 +26,7 @@ class TutorialViewController: UIViewController {
         
         //Add panels to an array
         var panels = [MYIntroductionPanel]()
-        for i in 0...1 {
+        for i in 0...9 {
             let imageName = "tutorial\(i)"+sufix
             let panel = MYIntroductionPanel(frame: frame, title: NSLocalizedString("Title\(i)", comment: "Title"), description: NSLocalizedString("Description\(i)", comment: "Description"), image: UIImage(named: imageName)!)
             panel.PanelImageView.contentMode = .ScaleAspectFit

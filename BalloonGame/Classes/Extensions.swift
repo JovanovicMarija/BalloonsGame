@@ -76,7 +76,12 @@ extension UIImage {
         self.drawInRect(CGRectMake(0, 0, self.size.width, self.size.height))
         
         // Creating a point within the space that is as bit as the image.
-        let rect: CGRect = CGRectMake(0, 0, self.size.width, self.size.height)
+        let rect: CGRect
+        if UIDevice.currentDevice().userInterfaceIdiom == .Phone {
+            rect = CGRectMake(0, 0, self.size.width, self.size.height)
+        } else {
+            rect = CGRectMake(0, 40, self.size.width, self.size.height)
+        }
         
         //Now Draw the text into an image.
         text.drawInRect(rect, withAttributes: textFontAttributes)

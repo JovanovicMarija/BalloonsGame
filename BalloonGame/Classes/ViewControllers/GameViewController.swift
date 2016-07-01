@@ -69,6 +69,19 @@ class GameViewController: UIViewController {
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
+        var count = NSUserDefaults.standardUserDefaults().integerForKey(userDefaults.FirstGame.rawValue)
+
+        if count < 3 {
+            let title = NSLocalizedString("AlertTitleFirstGame", comment: "Did you know?")
+            let message = NSLocalizedString("AlertMessageFirstGame", comment: "To go back, long press anywhere on sky")
+            let alert = UIAlertController(title: title, message: message, preferredStyle: .Alert)
+            alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "OK"), style: .Default, handler: nil))
+            presentViewController(alert, animated: true, completion: nil)
+            
+            count+=1
+            NSUserDefaults.standardUserDefaults().setInteger(count, forKey: userDefaults.FirstGame.rawValue)
+        }
+        
         Manager.sharedInstance.playBackgroundMusic()
     }
     

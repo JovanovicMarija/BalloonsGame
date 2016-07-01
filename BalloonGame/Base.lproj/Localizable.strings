@@ -36,7 +36,7 @@ AlertMessageDeleteUser = "This will delete all related data and statistics. This
 
 AlertTitleDefaultUserDeleted = "Default user deleted";
 
-AlertMessageDefaultUserDeleted = "Please choose new default player.";
+AlertMessageDefaultUserDeleted = "Please choose new default player";
 
 AlertTitleDiscardingChanges = "Warning";
 
@@ -58,6 +58,10 @@ ActionTakePhoto = "Take a photo";
 
 ActionChooseFromLibrary = "Choose from library";
 
+AlertTitleFirstGame = "Did you know?";
+
+AlertMessageFirstGame = "To go back, long press anywhere on sky";
+
 Title0 = "Welcome screen";
 
 Description0 = "Click on \"New game\" to play a game with user whose name you see on screen. \nIf you wish another player to play a game or you want to create new player, click on \"Pick another player\".";
@@ -65,4 +69,37 @@ Description0 = "Click on \"New game\" to play a game with user whose name you se
 Title1 = "Choose a game";
 
 Description1 = "Choose which type of game you want user to play.";
+
+Title2 = "Basic game";
+
+Description2 = "Touch balloon to make it explode. Each balloon will give you one point.\nIf balloon is below a cloud, it cannot be reached.";
+
+Title3 = "Color Game";
+
+Description3 = "There are three small balloons in the upper part of the screen. Find balloon of these colors in the same order and touch them.\nAfter you explode balloon, it will fade away.\nOther balloons won't explode.";
+
+Title4 = "Letter Game";
+
+Description4 = "Touch balloon to explode it and hear a word that starts with that letter";
+
+Title5 = "Menu";
+
+Description5 = "If you click on upper-left button, letf menu will be presented. You can access games, users, statistics and tutorials from there.";
+
+Title6 = "Statistics";
+
+Description6 = "You can see current user's best score and how many games has played on a specific date.\nRed date is today.\nBlue date is date for which results are presented.\nIf there is a dot below a date, that means there is data for that date. Otherwise, there were no games played that day.";
+
+Title7 = "Daily Statistics";
+
+Description7 = "Here you can see all games played on chosen date. By clicking on those buttons you can filter games by game type and sort them in descending order by starting time, duration or points.";
+
+Title8 = "All Users";
+
+Description8 = "The list of all users is sorted by the time they last played a game. Current user has blue background.\nTo choose new default player, simply click on existing user.\nTo create new player, click on \"Create new user\".\nTo edit or delete existing user, press on existing user and drag to left.\nTo search a list, start typing user's name in the search field on the top of the screen.";
+
+Title9 = "Single User";
+
+Description9 = "Enter user's name.\nClick on image placeholder to add user's photo.\nClick on letters to hear default sounds.\nLong press letters to edit sounds.";
+
 

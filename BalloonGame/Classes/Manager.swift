@@ -12,6 +12,7 @@ import AVFoundation
 
 enum userDefaults: String {
     case LastUser = "lastUser"
+    case FirstGame = "firstGame"
 }
 
 class Manager {

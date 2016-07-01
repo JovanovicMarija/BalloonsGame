@@ -36,7 +36,7 @@ AlertMessageDeleteUser = "Obrisaće se i svi njegovi podaci i statistika. Ova ak
 
 AlertTitleDefaultUserDeleted = "Prethodni igrač je obrisan";
 
-AlertMessageDefaultUserDeleted = "Odaberite novog igrača.";
+AlertMessageDefaultUserDeleted = "Odaberite novog igrača";
 
 AlertTitleDiscardingChanges = "Upozorenje";
 
@@ -58,6 +58,10 @@ ActionTakePhoto = "Uslikajte";
 
 ActionChooseFromLibrary = "Izaberite iz albuma";
 
+AlertTitleFirstGame = "Da li ste znali?";
+
+AlertMessageFirstGame = "Ako želite da se vratite na prethodni ekran, kliknite na nebo i dugo držite";
+
 Title0 = "Početni ekran";
 
 Description0 = "Kliknite na \"Nova igra\" da započnete igru za igrača čije ime vidite na ekranu. \nUkoliko želite da promenite igrača ili želite da napravite novog igrača, kliknite na \"Izaberi drugog igača\".";
@@ -66,3 +70,34 @@ Title1 = "Izaberite igru";
 
 Description1 = "Izaberite koji tip igre želite da Vaš igrač igra.";
 
+Title2 = "Osnovna igra";
+
+Description2 = "Dodirnite balon kako bi eksplodirao. Svaki balon donosi jedan poen.\nAko je balon ispod oblaka, ne možete ga probušiti.";
+
+Title3 = "Igra sa bojama";
+
+Description3 = "U gornjem delu ekrana su tri mala balona. Pronađite balone istih boja i dodirnite ih u istom redosledu.\nNakon što probušite balon, izbledeće.\nOstali baloni neće eksplodirati.";
+
+Title4 = "Igra sa slovima";
+
+Description4 = "Dodirnite balon kako biste ga probušili i čućete reč koja počinje na to slovo";
+
+Title5 = "Meni";
+
+Description5 = "Klikom na dugme u gornjem levom uglu ekrana otvara se meni. Odatle možete da pristupite igrama, igračima, statistici i uputstvu.";
+
+Title6 = "Statistika";
+
+Description6 = "Ovde možete videti najbolji rezultat i broj odigranih partija trenutnog igrača za odabrani dan.\nDanašnji dan je obeležen crvenom bojom.\nPlavom bojom je obeležen dan za koji su prikazani rezultati.\nAko ispod datuma postoji tačkica, to znači da ima podataka za taj dan. Inače, tog dana nije odigrana ni jedna igra.";
+
+Title7 = "Dnevna statistika";
+
+Description7 = "Ovde možete videti sve igre za odabrani dan. Klikom na dugme sa tim natpisom, možete da filtrirate igre po tipu igre, kao i da ih uredite u opadajućem poretku po početnom trenutku, dužini trajanja igre i osvojenim poenima.";
+
+Title8 = "Svi igrači";
+
+Description8 = "Lista svih igrača je sortirana po datumu kada su poslednji put igrali igre. Trenutni igrač ima plavu pozadinu.\nDa izaberete novog trenutnog igrača, kliknite na postojećeg igrača.\nDa naprvite novog igrača, kliknite na \"Napravi igrača\".\nDa izmenite ili obrišete postojećeg igrača, pritisnite na ime i vucite ulevo.\nDa biste pretražili listu, ukucajte ime igrača u polje za pretragu koje se nalazi na vrhu ekrana.";
+
+Title9 = "Igrač";
+
+Description9 = "Unesite ime igrača.\nKliknite na sliku kako biste uneli sliku igrača.\nKliknite na slovo kako biste čuli podrazumevani zvuk.\nDugo držite slovo kako biste izmenili zvuk.";
