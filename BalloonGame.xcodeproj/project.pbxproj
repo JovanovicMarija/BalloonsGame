@@ -114,6 +114,7 @@
 		85AEEEFE1D26CD74000F1D23 /* tutorial8.png in Resources */ = {isa = PBXBuildFile; fileRef = 85AEEF001D26CD74000F1D23 /* tutorial8.png */; };
 		85AEEF061D26D44E000F1D23 /* tutorial9iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = 85AEEF081D26D44E000F1D23 /* tutorial9iPad.png */; };
 		85AEEF091D26D452000F1D23 /* tutorial9.png in Resources */ = {isa = PBXBuildFile; fileRef = 85AEEF0B1D26D452000F1D23 /* tutorial9.png */; };
+		85B820B21D26DD52002EE5AD /* letters.plist in Resources */ = {isa = PBXBuildFile; fileRef = 85B820B41D26DD52002EE5AD /* letters.plist */; };
 		85BB769B1D2282A200083AD0 /* Statistics.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85BB769D1D2282A200083AD0 /* Statistics.storyboard */; };
 		85CAFDE11D2270730016BBE2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85CAFDE01D2270730016BBE2 /* AppDelegate.swift */; };
 		85CAFDE61D2270730016BBE2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85CAFDE41D2270730016BBE2 /* Main.storyboard */; };
@@ -248,6 +249,8 @@
 		85AEEF0A1D26D452000F1D23 /* Base */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Base; path = Base.lproj/tutorial9.png; sourceTree = "<group>"; };
 		85AEEF0C1D26D454000F1D23 /* sr */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sr; path = sr.lproj/tutorial9.png; sourceTree = "<group>"; };
 		85AEEF0D1D26D458000F1D23 /* sr */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sr; path = sr.lproj/tutorial9iPad.png; sourceTree = "<group>"; };
+		85B820B31D26DD52002EE5AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Base; path = Base.lproj/letters.plist; sourceTree = "<group>"; };
+		85B820B51D26DD56002EE5AD /* sr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = sr; path = sr.lproj/letters.plist; sourceTree = "<group>"; };
 		85BB769C1D2282A200083AD0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Statistics.storyboard; sourceTree = "<group>"; };
 		85BB769F1D2282AA00083AD0 /* sr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sr; path = sr.lproj/Statistics.strings; sourceTree = "<group>"; };
 		85CAFDDD1D2270720016BBE2 /* BalloonGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BalloonGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -506,6 +509,7 @@
 				85CAFDE71D2270730016BBE2 /* BalloonGame.xcdatamodeld */,
 				85BB769D1D2282A200083AD0 /* Statistics.storyboard */,
 				851FC0641D2288AA00553C1D /* Localizable.strings */,
+				85B820B41D26DD52002EE5AD /* letters.plist */,
 			);
 			path = BalloonGame;
 			sourceTree = "<group>";
@@ -677,6 +681,7 @@
 				8573E0161D227B2E00DF2C1F /* o.m4a in Resources */,
 				8573DFE21D227B2E00DF2C1F /* LaunchScreen.storyboard in Resources */,
 				8573E0141D227B2E00DF2C1F /* m.m4a in Resources */,
+				85B820B21D26DD52002EE5AD /* letters.plist in Resources */,
 				8573E0291D227B2E00DF2C1F /* home.m4a in Resources */,
 				8573E0221D227B2E00DF2C1F /* apple.m4a in Resources */,
 				8573E0301D227B2E00DF2C1F /* onion.m4a in Resources */,
@@ -909,6 +914,15 @@
 				85AEEF0C1D26D454000F1D23 /* sr */,
 			);
 			name = tutorial9.png;
+			sourceTree = "<group>";
+		};
+		85B820B41D26DD52002EE5AD /* letters.plist */ = {
+			isa = PBXVariantGroup;
+			children = (
+				85B820B31D26DD52002EE5AD /* Base */,
+				85B820B51D26DD56002EE5AD /* sr */,
+			);
+			name = letters.plist;
 			sourceTree = "<group>";
 		};
 		85BB769D1D2282A200083AD0 /* Statistics.storyboard */ = {

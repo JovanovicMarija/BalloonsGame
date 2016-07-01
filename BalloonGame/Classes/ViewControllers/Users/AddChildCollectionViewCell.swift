@@ -10,7 +10,7 @@ import UIKit
 
 class AddChildCollectionViewCell: UICollectionViewCell {
     
-    var letter: Character!
+    var letter: String!
     
     @IBOutlet weak var labelLetter: UILabel!
     

@@ -33,17 +33,17 @@ class Game: BalloonProtocol {
         }
     }
     var misses: Int = 0
-    var level: Int = 1 {
+    var level: Int = 0 {
         didSet {
-            Manager.sharedInstance.delegatePointsUpdater?.speedUpWithNewSpeed(10.0)
+            if level < 10 {
+                Manager.sharedInstance.delegatePointsUpdater?.speedUpWithNewSpeed(10.0)
+            }
         }
     }
     
     var duration: NSTimeInterval = 0
     
     var date = NSDate()
-    
-    var shouldSpeedUp: Bool = false
     
     var allBalloons: [Balloon] = [Balloon]()
     

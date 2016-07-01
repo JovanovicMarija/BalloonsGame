@@ -26,16 +26,18 @@ extension Bool {
 }
 
 extension Character {
+    // TODO: - promeni
     static func randomUppercaseLetter() -> Character {
         let decValue = Int(arc4random_uniform(26)) + 65
         return Character(UnicodeScalar(decValue))
     }
-    
+    // TODO: - promeni
     static func randomLowercaseLetter() -> Character {
         let decValue = Int(arc4random_uniform(26)) + 97
         return Character(UnicodeScalar(decValue))
     }
     
+    // TODO: - promeni
     static func randomLetter() -> Character {
         let upperCase: Bool = Bool.random()
         if upperCase {

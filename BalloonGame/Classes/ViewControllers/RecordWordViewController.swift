@@ -11,7 +11,7 @@ import AVFoundation
 
 class RecordWordViewController: UIViewController, AVAudioRecorderDelegate {
     
-    var letter: Character!
+    var letter: String!
 
     // IBOutlet
     @IBOutlet weak var labelTime: UILabel!

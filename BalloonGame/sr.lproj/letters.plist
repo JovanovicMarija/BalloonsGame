@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+   letters.plist
+   BalloonGame
+
+   Created by Marija Jovanovic on 7/1/16.
+   Copyright (c) 2016 Marija Jovanovic. All rights reserved.
+-->
+<plist version="1.0">
+    <array>
+        <string>a</string>
+        <string>b</string>
+        <string>v</string>
+        <string>g</string>
+        <string>d</string>
+        <string>đ</string>
+        <string>e</string>
+        <string>ž</string>
+        <string>z</string>
+        <string>i</string>
+        <string>j</string>
+        <string>k</string>
+        <string>l</string>
+        <string>lj</string>
+        <string>m</string>
+        <string>n</string>
+        <string>nj</string>
+        <string>o</string>
+        <string>p</string>
+        <string>r</string>
+        <string>s</string>
+        <string>t</string>
+        <string>c</string>
+        <string>ć</string>
+        <string>u</string>
+        <string>f</string>
+        <string>h</string>
+        <string>č</string>
+        <string>dž</string>
+        <string>š</string>
+    </array>
+</plist>

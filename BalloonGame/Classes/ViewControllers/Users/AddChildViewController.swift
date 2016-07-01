@@ -45,8 +45,7 @@ class AddChildViewController: UIViewController {
     }
     
     // properties
-    var alphabet: [Character] = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m",
-                                  "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+    var alphabet: [String]!
     
     var firstTimePressedCollectionCell = true
     
@@ -78,6 +77,10 @@ class AddChildViewController: UIViewController {
     // MARK: - ViewController Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // load letters
+        let lettersPath = NSBundle.mainBundle().pathForResource("letters", ofType: "plist")
+        alphabet = NSArray(contentsOfFile: lettersPath!) as! [String]
         
         // collection view
         collectionView.delegate = self
@@ -255,17 +258,17 @@ class AddChildViewController: UIViewController {
         }
         
         
-        for character in alphabet {
-            let entity = NSEntityDescription.entityForName("AudioWord", inManagedObjectContext: managedContext)
-            let letter = NSManagedObject(entity: entity!, insertIntoManagedObjectContext: managedContext) as! AudioWord
-            letter.id = NSUUID().UUIDString
-            letter.letter = String(character)
-            let url = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("\(character)", ofType: "m4a")!)
-            letter.path = String(url)
-            
-            // TODO: - ovde sam stala
-            //                user.arrayAudioWords
-        }
+//        for character in alphabet {
+//            let entity = NSEntityDescription.entityForName("AudioWord", inManagedObjectContext: managedContext)
+//            let letter = NSManagedObject(entity: entity!, insertIntoManagedObjectContext: managedContext) as! AudioWord
+//            letter.id = NSUUID().UUIDString
+//            letter.letter = String(character)
+//            let url = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("\(character)", ofType: "m4a")!)
+//            letter.path = String(url)
+//            
+//            // TODO: - ovde sam stala
+//            //                user.arrayAudioWords
+//        }
         
         //4
         do {
