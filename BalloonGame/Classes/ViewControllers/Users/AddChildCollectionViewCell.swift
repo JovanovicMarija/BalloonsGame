@@ -10,7 +10,12 @@ import UIKit
 
 class AddChildCollectionViewCell: UICollectionViewCell {
     
-    var letter: String!
+    var letter: String! {
+        didSet {
+            labelLetter.text = self.letter
+            labelLetter.textColor = UIColor.whiteColor()
+        }
+    }
     
     @IBOutlet weak var labelLetter: UILabel!
     

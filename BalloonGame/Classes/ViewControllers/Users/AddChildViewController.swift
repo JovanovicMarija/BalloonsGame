@@ -26,7 +26,12 @@ class AddChildViewController: UIViewController {
     
     @IBOutlet weak var buttonPhoto: UIButton!
 
-    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var collectionView: UICollectionView! {
+        didSet {
+            collectionView.delegate = self
+            collectionView.dataSource = self
+        }
+    }
     
     @IBOutlet weak var imageView: UIImageView! {
         didSet{
@@ -82,10 +87,6 @@ class AddChildViewController: UIViewController {
         let lettersPath = NSBundle.mainBundle().pathForResource("letters", ofType: "plist")
         alphabet = NSArray(contentsOfFile: lettersPath!) as! [String]
         
-        // collection view
-        collectionView.delegate = self
-        collectionView.dataSource = self
-        
         // check if there is existing child
         if let existingUser = existingUser {
             imageView.image = UIImage(data: existingUser.photo!)
@@ -138,8 +139,6 @@ class AddChildViewController: UIViewController {
         if let userInfo = notification.userInfo {
             let duration = userInfo[UIKeyboardAnimationDurationUserInfoKey] as! NSNumber
             let curve = userInfo[UIKeyboardAnimationCurveUserInfoKey] as! NSNumber
-            let keyboardScreenEndFrame = (userInfo[UIKeyboardFrameEndUserInfoKey] as! NSValue).CGRectValue()
-            let keyboardViewEndFrame = self.view.convertRect(keyboardScreenEndFrame, fromView: self.view.window)
             let heightBottomConstraint: CGFloat = notification.name == UIKeyboardWillHideNotification ? -22 : (UIDevice.currentDevice().orientation == .Portrait ? -22 : -64)
             
             UIView.animateWithDuration(duration.doubleValue,
@@ -257,18 +256,20 @@ class AddChildViewController: UIViewController {
             user.photo = UIImagePNGRepresentation(photo)
         }
         
-        
-//        for character in alphabet {
-//            let entity = NSEntityDescription.entityForName("AudioWord", inManagedObjectContext: managedContext)
-//            let letter = NSManagedObject(entity: entity!, insertIntoManagedObjectContext: managedContext) as! AudioWord
-//            letter.id = NSUUID().UUIDString
-//            letter.letter = String(character)
-//            let url = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("\(character)", ofType: "m4a")!)
-//            letter.path = String(url)
-//            
-//            // TODO: - ovde sam stala
-//            //                user.arrayAudioWords
-//        }
+        for character in alphabet {
+            let entity = NSEntityDescription.entityForName("AudioWord", inManagedObjectContext: managedContext)
+            let letter = NSManagedObject(entity: entity!, insertIntoManagedObjectContext: managedContext) as! AudioWord
+            letter.id = NSUUID().UUIDString
+            letter.letter = character
+            let url = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("\(character)", ofType: "m4a")!)
+            letter.path = String(url)
+            
+            // TODO: - jel ovo uopste kreiralo letters nezavisne od user u core data
+            // TODO: - pazi da li ovo brisem kad brisem korisnika
+            let mutableItems = user.arrayAudioWords?.mutableCopy() as! NSMutableOrderedSet
+            mutableItems.addObject(letter)
+            user.arrayAudioWords = mutableItems.copy() as? NSOrderedSet
+        }
         
         //4
         do {
@@ -358,8 +359,6 @@ extension AddChildViewController: UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) as! AddChildCollectionViewCell
         
         cell.letter = alphabet[indexPath.row]
-        cell.labelLetter.text = "\(alphabet[indexPath.row])"
-        cell.labelLetter.textColor = UIColor.whiteColor()
         
         // gesture
         longGesture = UILongPressGestureRecognizer(target: self, action: #selector(handleLongPress))
