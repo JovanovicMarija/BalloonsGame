@@ -17,7 +17,6 @@ extension User {
     @NSManaged var id: String?
     @NSManaged var name: String?
     @NSManaged var photo: NSData?
-    @NSManaged var arrayAudioWords: NSOrderedSet?
     @NSManaged var arraySingleGames: NSSet?
 
 }

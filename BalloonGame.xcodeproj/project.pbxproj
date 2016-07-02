@@ -58,7 +58,6 @@
 		8573DFED1D227B2E00DF2C1F /* ChooseLevelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8573DF861D227B2E00DF2C1F /* ChooseLevelViewController.swift */; };
 		8573DFEE1D227B2E00DF2C1F /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8573DF871D227B2E00DF2C1F /* GameViewController.swift */; };
 		8573DFEF1D227B2E00DF2C1F /* LeftMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8573DF881D227B2E00DF2C1F /* LeftMenuViewController.swift */; };
-		8573DFF01D227B2E00DF2C1F /* RecordWordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8573DF891D227B2E00DF2C1F /* RecordWordViewController.swift */; };
 		8573DFF11D227B2E00DF2C1F /* RootMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8573DF8A1D227B2E00DF2C1F /* RootMenuViewController.swift */; };
 		8573DFF21D227B2E00DF2C1F /* DailyStatisticsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8573DF8C1D227B2E00DF2C1F /* DailyStatisticsTableViewCell.swift */; };
 		8573DFF31D227B2E00DF2C1F /* DailyStatisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8573DF8D1D227B2E00DF2C1F /* DailyStatisticsViewController.swift */; };
@@ -70,8 +69,6 @@
 		8573DFF91D227B2E00DF2C1F /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8573DF941D227B2E00DF2C1F /* WelcomeViewController.swift */; };
 		8573DFFA1D227B2E00DF2C1F /* Clouds.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 8573DF951D227B2E00DF2C1F /* Clouds.atlas */; };
 		8573DFFB1D227B2E00DF2C1F /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8573DF971D227B2E00DF2C1F /* RoundedButton.swift */; };
-		8573DFFC1D227B2E00DF2C1F /* AudioWord+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8573DF991D227B2E00DF2C1F /* AudioWord+CoreDataProperties.swift */; };
-		8573DFFD1D227B2E00DF2C1F /* AudioWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8573DF9A1D227B2E00DF2C1F /* AudioWord.swift */; };
 		8573DFFE1D227B2E00DF2C1F /* SingleGame+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8573DF9B1D227B2E00DF2C1F /* SingleGame+CoreDataProperties.swift */; };
 		8573DFFF1D227B2E00DF2C1F /* SingleGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8573DF9C1D227B2E00DF2C1F /* SingleGame.swift */; };
 		8573E0001D227B2E00DF2C1F /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8573DF9D1D227B2E00DF2C1F /* User+CoreDataProperties.swift */; };
@@ -228,7 +225,6 @@
 		8573DF861D227B2E00DF2C1F /* ChooseLevelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseLevelViewController.swift; sourceTree = "<group>"; };
 		8573DF871D227B2E00DF2C1F /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		8573DF881D227B2E00DF2C1F /* LeftMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftMenuViewController.swift; sourceTree = "<group>"; };
-		8573DF891D227B2E00DF2C1F /* RecordWordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordWordViewController.swift; sourceTree = "<group>"; };
 		8573DF8A1D227B2E00DF2C1F /* RootMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootMenuViewController.swift; sourceTree = "<group>"; };
 		8573DF8C1D227B2E00DF2C1F /* DailyStatisticsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyStatisticsTableViewCell.swift; sourceTree = "<group>"; };
 		8573DF8D1D227B2E00DF2C1F /* DailyStatisticsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyStatisticsViewController.swift; sourceTree = "<group>"; };
@@ -240,8 +236,6 @@
 		8573DF941D227B2E00DF2C1F /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		8573DF951D227B2E00DF2C1F /* Clouds.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Clouds.atlas; sourceTree = "<group>"; };
 		8573DF971D227B2E00DF2C1F /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
-		8573DF991D227B2E00DF2C1F /* AudioWord+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AudioWord+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		8573DF9A1D227B2E00DF2C1F /* AudioWord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioWord.swift; sourceTree = "<group>"; };
 		8573DF9B1D227B2E00DF2C1F /* SingleGame+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SingleGame+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		8573DF9C1D227B2E00DF2C1F /* SingleGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleGame.swift; sourceTree = "<group>"; };
 		8573DF9D1D227B2E00DF2C1F /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -372,7 +366,6 @@
 				8573DF861D227B2E00DF2C1F /* ChooseLevelViewController.swift */,
 				8573DF871D227B2E00DF2C1F /* GameViewController.swift */,
 				8573DF881D227B2E00DF2C1F /* LeftMenuViewController.swift */,
-				8573DF891D227B2E00DF2C1F /* RecordWordViewController.swift */,
 				8573DF8A1D227B2E00DF2C1F /* RootMenuViewController.swift */,
 				8573DF8B1D227B2E00DF2C1F /* Statistics */,
 				8573DF8F1D227B2E00DF2C1F /* Users */,
@@ -413,8 +406,6 @@
 		8573DF981D227B2E00DF2C1F /* Managed Objects */ = {
 			isa = PBXGroup;
 			children = (
-				8573DF991D227B2E00DF2C1F /* AudioWord+CoreDataProperties.swift */,
-				8573DF9A1D227B2E00DF2C1F /* AudioWord.swift */,
 				8573DF9B1D227B2E00DF2C1F /* SingleGame+CoreDataProperties.swift */,
 				8573DF9C1D227B2E00DF2C1F /* SingleGame.swift */,
 				8573DF9D1D227B2E00DF2C1F /* User+CoreDataProperties.swift */,
@@ -813,7 +804,6 @@
 			files = (
 				8573DFED1D227B2E00DF2C1F /* ChooseLevelViewController.swift in Sources */,
 				8573DFF81D227B2E00DF2C1F /* AllChildrenViewController.swift in Sources */,
-				8573DFF01D227B2E00DF2C1F /* RecordWordViewController.swift in Sources */,
 				8573DFE71D227B2E00DF2C1F /* GameBasic.swift in Sources */,
 				8573DFE91D227B2E00DF2C1F /* GameLetters.swift in Sources */,
 				8573DFF91D227B2E00DF2C1F /* WelcomeViewController.swift in Sources */,
@@ -831,13 +821,11 @@
 				85CAFDE11D2270730016BBE2 /* AppDelegate.swift in Sources */,
 				8573DFEF1D227B2E00DF2C1F /* LeftMenuViewController.swift in Sources */,
 				8573DFF51D227B2E00DF2C1F /* AddChildCollectionViewCell.swift in Sources */,
-				8573DFFC1D227B2E00DF2C1F /* AudioWord+CoreDataProperties.swift in Sources */,
 				8573DFF61D227B2E00DF2C1F /* AddChildViewController.swift in Sources */,
 				8573DFE51D227B2E00DF2C1F /* Extensions.swift in Sources */,
 				8573E0001D227B2E00DF2C1F /* User+CoreDataProperties.swift in Sources */,
 				8573DFFB1D227B2E00DF2C1F /* RoundedButton.swift in Sources */,
 				8573DFF41D227B2E00DF2C1F /* StatisticsViewController.swift in Sources */,
-				8573DFFD1D227B2E00DF2C1F /* AudioWord.swift in Sources */,
 				85E7B62B1D2527D600D8DF1D /* TutorialViewController.swift in Sources */,
 				8573DFF71D227B2E00DF2C1F /* AllChildrenTableViewCell.swift in Sources */,
 				8573DFF31D227B2E00DF2C1F /* DailyStatisticsViewController.swift in Sources */,

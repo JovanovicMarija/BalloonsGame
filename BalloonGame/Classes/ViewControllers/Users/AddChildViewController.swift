@@ -52,11 +52,7 @@ class AddChildViewController: UIViewController {
     // properties
     var alphabet: [String]!
     
-    var firstTimePressedCollectionCell = true
-    
     var audioPlayer = AVAudioPlayer()
-
-    var longGesture: UILongPressGestureRecognizer!
     
     var cellSize: CGFloat = {
         let ret: CGFloat
@@ -77,7 +73,7 @@ class AddChildViewController: UIViewController {
         }
     }()
     
-    var changesMade = false // TODO: - sredi i za editovanje zvukova
+    var changesMade = false
     
     // MARK: - ViewController Lifecycle
     override func viewDidLoad() {
@@ -95,7 +91,6 @@ class AddChildViewController: UIViewController {
         
         // text field
         textField.addTarget(self, action: #selector(AddChildViewController.textFieldDidChange), forControlEvents: .EditingChanged)
-
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -256,22 +251,6 @@ class AddChildViewController: UIViewController {
             user.photo = UIImagePNGRepresentation(photo)
         }
         
-        for character in alphabet {
-            print(character)
-            let entity = NSEntityDescription.entityForName("AudioWord", inManagedObjectContext: managedContext)
-            let letter = NSManagedObject(entity: entity!, insertIntoManagedObjectContext: managedContext) as! AudioWord
-            letter.id = NSUUID().UUIDString
-            letter.letter = character
-            let url = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("\(character)", ofType: "m4a")!)
-            letter.path = String(url)
-            
-            // TODO: - jel ovo uopste kreiralo letters nezavisne od user u core data
-            // TODO: - pazi da li ovo brisem kad brisem korisnika
-            let mutableItems = user.arrayAudioWords?.mutableCopy() as! NSMutableOrderedSet
-            mutableItems.addObject(letter)
-            user.arrayAudioWords = mutableItems.copy() as? NSOrderedSet
-        }
-        
         //4
         do {
             try managedContext.save()
@@ -316,17 +295,6 @@ class AddChildViewController: UIViewController {
         audioPlayer.prepareToPlay()
         audioPlayer.play()
     }
-    
-    // MARK: - gesture
-    func handleLongPress(sender: UILongPressGestureRecognizer) {
-        if sender.state == .Ended {
-            // present modal view
-            let modalViewController = self.storyboard?.instantiateViewControllerWithIdentifier("recordWordViewController") as! RecordWordViewController
-            modalViewController.letter = (sender.view as! AddChildCollectionViewCell).letter
-            modalViewController.modalPresentationStyle = .OverCurrentContext
-            presentViewController(modalViewController, animated: true, completion: nil)
-        }
-    }
 }
 
 extension AddChildViewController: UITextFieldDelegate {
@@ -361,10 +329,6 @@ extension AddChildViewController: UICollectionViewDataSource {
         
         cell.letter = alphabet[indexPath.row]
         
-        // gesture
-        longGesture = UILongPressGestureRecognizer(target: self, action: #selector(handleLongPress))
-        cell.addGestureRecognizer(longGesture)
-        
         return cell
     }
 }
@@ -380,19 +344,7 @@ extension AddChildViewController: UICollectionViewDelegateFlowLayout {
 
 extension AddChildViewController: UICollectionViewDelegate {
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        
-        if firstTimePressedCollectionCell == false {
-            playSoundForLetterAtIndex(indexPath.row)
-        } else { // first time
-            firstTimePressedCollectionCell = false
-            // present the message
-            let title = NSLocalizedString("AlertTitleSoundEditing", comment: "Did you know?")
-            let message = NSLocalizedString("AlertMessageSoundEditing", comment: "To edit the word or the sound, long press the letter")
-            let alert = UIAlertController(title: title, message: message, preferredStyle: .Alert)
-            alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "OK"), style: .Default, handler: { [unowned self] _ in
-                self.playSoundForLetterAtIndex(indexPath.row)
-                }))
-            presentViewController(alert, animated: true, completion: nil)
-        }
+
+        playSoundForLetterAtIndex(indexPath.row)
     }
 }
