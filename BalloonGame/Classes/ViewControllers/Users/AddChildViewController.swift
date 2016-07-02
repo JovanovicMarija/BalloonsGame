@@ -257,6 +257,7 @@ class AddChildViewController: UIViewController {
         }
         
         for character in alphabet {
+            print(character)
             let entity = NSEntityDescription.entityForName("AudioWord", inManagedObjectContext: managedContext)
             let letter = NSManagedObject(entity: entity!, insertIntoManagedObjectContext: managedContext) as! AudioWord
             letter.id = NSUUID().UUIDString
