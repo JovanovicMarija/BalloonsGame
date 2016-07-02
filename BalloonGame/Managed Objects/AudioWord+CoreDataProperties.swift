@@ -16,7 +16,6 @@ extension AudioWord {
 
     @NSManaged var id: String?
     @NSManaged var letter: String?
-    @NSManaged var word: String?
     @NSManaged var path: String?
 
 }

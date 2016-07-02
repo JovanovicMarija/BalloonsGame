@@ -4,7 +4,6 @@
         <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="letter" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="path" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="word" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="SingleGame" representedClassName=".SingleGame" syncable="YES">
         <attribute name="date" optional="YES" attributeType="Date" syncable="YES"/>
@@ -21,7 +20,7 @@
         <relationship name="arraySingleGames" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="SingleGame" syncable="YES"/>
     </entity>
     <elements>
-        <element name="AudioWord" positionX="-63" positionY="9" width="128" height="105"/>
+        <element name="AudioWord" positionX="-63" positionY="9" width="128" height="90"/>
         <element name="SingleGame" positionX="-54" positionY="45" width="128" height="120"/>
         <element name="User" positionX="-63" positionY="-18" width="128" height="120"/>
     </elements>

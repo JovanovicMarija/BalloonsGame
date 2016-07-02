@@ -927,19 +927,6 @@
                                             </button>
                                         </subviews>
                                     </stackView>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fM7-96-3fk">
-                                        <rect key="frame" x="8" y="45" width="224" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="7yV-1k-2wW">
-                                                <variation key="heightClass=regular-widthClass=regular" constant="45"/>
-                                            </constraint>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                        <variation key="heightClass=regular-widthClass=regular">
-                                            <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                        </variation>
-                                    </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Mv-hl-iWr">
                                         <rect key="frame" x="99" y="8" width="42" height="21"/>
                                         <constraints>
@@ -964,10 +951,8 @@
                                     <constraint firstAttribute="width" constant="240" id="ApU-Au-XdW">
                                         <variation key="heightClass=regular-widthClass=regular" constant="360"/>
                                     </constraint>
-                                    <constraint firstItem="fM7-96-3fk" firstAttribute="leading" secondItem="tGp-tu-MbX" secondAttribute="leading" constant="8" id="FPu-uB-n7H"/>
                                     <constraint firstItem="8Mv-hl-iWr" firstAttribute="centerX" secondItem="tGp-tu-MbX" secondAttribute="centerX" id="PTX-x1-rxH"/>
                                     <constraint firstItem="8Mv-hl-iWr" firstAttribute="leading" secondItem="9gY-SE-gd6" secondAttribute="trailing" constant="8" id="VyA-O1-yOt"/>
-                                    <constraint firstAttribute="trailing" secondItem="fM7-96-3fk" secondAttribute="trailing" constant="8" id="YEU-TV-JIz"/>
                                     <constraint firstItem="8Mv-hl-iWr" firstAttribute="top" secondItem="tGp-tu-MbX" secondAttribute="top" constant="8" id="cdC-Gu-Y2R"/>
                                     <constraint firstItem="vy5-ik-qPu" firstAttribute="leading" secondItem="tGp-tu-MbX" secondAttribute="leading" constant="8" id="joc-NV-Myy"/>
                                     <constraint firstAttribute="bottom" secondItem="vy5-ik-qPu" secondAttribute="bottom" constant="8" id="mdf-8k-YEA"/>
@@ -975,7 +960,6 @@
                                     <constraint firstAttribute="height" constant="120" id="nSj-vb-JwS">
                                         <variation key="heightClass=regular-widthClass=regular" constant="180"/>
                                     </constraint>
-                                    <constraint firstItem="fM7-96-3fk" firstAttribute="centerY" secondItem="tGp-tu-MbX" secondAttribute="centerY" id="q2x-6J-nIl"/>
                                     <constraint firstItem="vy5-ik-qPu" firstAttribute="centerX" secondItem="tGp-tu-MbX" secondAttribute="centerX" id="zGQ-3s-3ea"/>
                                 </constraints>
                             </view>
@@ -1020,7 +1004,6 @@
                         <outlet property="buttonPlay" destination="jIP-CU-DkM" id="NGA-8T-cqV"/>
                         <outlet property="buttonRecord" destination="0Jy-Au-8A3" id="cHe-ue-uUO"/>
                         <outlet property="labelTime" destination="8Mv-hl-iWr" id="JaB-Vc-KCW"/>
-                        <outlet property="textField" destination="fM7-96-3fk" id="3eL-9b-LLD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nHN-kv-bm9" userLabel="First Responder" sceneMemberID="firstResponder"/>
