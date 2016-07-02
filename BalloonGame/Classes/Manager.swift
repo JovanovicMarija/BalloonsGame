@@ -192,7 +192,7 @@ enum BalloonColor: String {
 protocol TopViewDelegate {
     func updatePoints()
     func balloonImages(names: [BalloonColor])
-    func playLetter(letter: Character)
+    func playLetter(letter: String)
     func disableBalloonAtIndex(index: Int)
     func removeBalloonWithID(id: String)
     func speedUpWithNewSpeed(speed: Double)

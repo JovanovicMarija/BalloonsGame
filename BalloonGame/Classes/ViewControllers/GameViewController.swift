@@ -63,7 +63,7 @@ class GameViewController: UIViewController {
         labelPoints.text = "\(game.points)p"
         
         self.performSelector(#selector(createNewBalloon), withObject: nil, afterDelay: 0.1)
-        timer = NSTimer.scheduledTimerWithTimeInterval(1.7, target: self, selector: #selector(GameViewController.createNewBalloon), userInfo: nil, repeats: true)
+        timer = NSTimer.scheduledTimerWithTimeInterval(2.0, target: self, selector: #selector(GameViewController.createNewBalloon), userInfo: nil, repeats: true)
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -160,8 +160,8 @@ extension GameViewController: TopViewDelegate {
         }
     }
     
-    func playLetter(letter: Character) {
-        Manager.sharedInstance.playSoundWithName(String(letter), type: "m4a")
+    func playLetter(letter: String) {
+        Manager.sharedInstance.playSoundWithName(letter, type: "m4a")
     }
     
     func disableBalloonAtIndex(index: Int) {

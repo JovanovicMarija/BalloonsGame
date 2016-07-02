@@ -11,7 +11,7 @@ import Foundation
 struct Balloon {
     let id: String = NSUUID().UUIDString
     let color: BalloonColor = BalloonColor.randomWithWeight()
-    var letter: Character?
+    var letter: String?
 }
 
 protocol BalloonProtocol {
@@ -87,12 +87,10 @@ class Game: BalloonProtocol {
     }
     
     func pause() {
-        // TODO
         duration += NSDate().timeIntervalSinceDate(date)
     }
     
     func resume() {
-        // TODO
         date = NSDate()
     }
     

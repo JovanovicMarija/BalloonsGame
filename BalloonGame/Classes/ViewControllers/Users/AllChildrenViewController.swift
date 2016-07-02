@@ -153,10 +153,8 @@ extension AllChildrenViewController: UITableViewDelegate {
                     NSUserDefaults.standardUserDefaults().removeObjectForKey(userDefaults.LastUser.rawValue)
                 }
                 
-                // TODO:
                 // First: delete all games associate to user id
-                // Second: delete all sounds
-                // Lastly: delete user
+                // Second: delete user
                 
                 // delete all games
                 self.users[indexPath.row].deleteAllGames()

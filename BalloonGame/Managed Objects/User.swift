@@ -14,8 +14,7 @@ class User: NSManagedObject {
 
     static func allUsers() -> [User]? {
         //1
-        let appDelegate =
-            UIApplication.sharedApplication().delegate as! AppDelegate
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         let managedContext = appDelegate.managedObjectContext
         
         //2
@@ -34,7 +33,6 @@ class User: NSManagedObject {
     static func userWithID(id: String) -> User? {
         //1
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        
         let managedContext = appDelegate.managedObjectContext
         
         // 2
@@ -53,13 +51,65 @@ class User: NSManagedObject {
         return nil
     }
     
+    static func createUser(name: String, photo: UIImage?) -> User? {
+        //1
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let managedContext = appDelegate.managedObjectContext
+        
+        //2
+        let entity =  NSEntityDescription.entityForName("User",
+                                                        inManagedObjectContext:managedContext)
+        
+        let user = NSManagedObject(entity: entity!,
+                                   insertIntoManagedObjectContext: managedContext) as! User
+        
+        //3
+        user.id = NSUUID().UUIDString
+        user.name = name
+        if let photo = photo {
+            user.photo = UIImagePNGRepresentation(photo)
+        }
+        
+        //4
+        do {
+            try managedContext.save()
+            return user
+        } catch let error as NSError  {
+            print("Could not save \(error), \(error.userInfo)")
+            return nil
+        }
+    }
+    
+    func editUser(name: String, photo: UIImage?) -> User? {
+        
+        //1
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let managedContext = appDelegate.managedObjectContext
+        
+        // 2
+        self.name = name
+        if let photo = photo {
+            self.photo = UIImagePNGRepresentation(photo)
+        }
+        
+        // 3
+        do {
+            try managedContext.save()
+            return self
+        } catch let error as NSError {
+            print("Could not save \(error), \(error.userInfo)")
+            return nil
+        }
+    }
+    
     func deleteUser() {
         //1
-        let appDelegate =
-            UIApplication.sharedApplication().delegate as! AppDelegate
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         let managedContext = appDelegate.managedObjectContext
+        
         // 2
         managedContext.deleteObject(self)
+        
         //3
         do {
             try managedContext.save()
@@ -74,8 +124,7 @@ class User: NSManagedObject {
         }
         
         //1
-        let appDelegate =
-            UIApplication.sharedApplication().delegate as! AppDelegate
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         let managedContext = appDelegate.managedObjectContext
         // 2
         
@@ -94,9 +143,7 @@ class User: NSManagedObject {
     func addGame(game: SingleGame) {
         
         //1
-        let appDelegate =
-            UIApplication.sharedApplication().delegate as! AppDelegate
-        
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         let managedContext = appDelegate.managedObjectContext
         
         // 2

@@ -2,4 +2,70 @@
 <Bucket
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BalloonGame/Classes/ViewControllers/GameViewController.swift"
+            timestampString = "489143131.492439"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "190"
+            endingLineNumber = "190"
+            landmarkName = "addGameToCurrentUser(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BalloonGame/Classes/ViewControllers/GameViewController.swift"
+            timestampString = "489143195.913614"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "194"
+            endingLineNumber = "194"
+            landmarkName = "addGameToCurrentUser(_:)"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BalloonGame.GameViewController.(addGameToCurrentUser in _6C66BFFC64AFBF0E814725CF2E0ECADA) (BalloonGame.SingleGame) -&gt; ()"
+                  moduleName = "BalloonGame"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Beba/Documents/BalloonGame/BalloonGame/Classes/ViewControllers/GameViewController.swift"
+                  timestampString = "489143195.915568"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "194"
+                  endingLineNumber = "194"
+                  offsetFromSymbolStart = "431">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BalloonGame.GameViewController.(addGameToCurrentUser in _6C66BFFC64AFBF0E814725CF2E0ECADA) (BalloonGame.SingleGame) -&gt; ()"
+                  moduleName = "BalloonGame"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Beba/Documents/BalloonGame/BalloonGame/Classes/ViewControllers/GameViewController.swift"
+                  timestampString = "489143195.915813"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "194"
+                  endingLineNumber = "194"
+                  offsetFromSymbolStart = "517">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

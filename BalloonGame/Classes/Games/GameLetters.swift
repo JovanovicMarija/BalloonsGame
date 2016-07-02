@@ -27,7 +27,7 @@ class GameLetters: Game {
     
     override func createNewBalloon() -> Balloon {
         var newBalloon = super.createNewBalloon()
-        newBalloon.letter = Character.randomLowercaseLetter()
+        newBalloon.letter = String.randomLowercaseLetter()
         super.updateBalloonWithLetter(newBalloon)
         return newBalloon
     }

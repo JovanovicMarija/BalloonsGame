@@ -217,63 +217,22 @@ class AddChildViewController: UIViewController {
             }
             var user: User? = nil
             if existingUser == nil {
-                user = createNewUser()
+                user = User.createUser(textField.text!, photo: imageView.image)
             } else {
                 if changesMade {
-                    user = editExistingUser()
+                    let name: String!
+                    if textField.text == nil {
+                        name = existingUser!.name!
+                    } else {
+                        name = textField.text!
+                    }
+                    user = existingUser?.editUser(name, photo: imageView.image)
                 } // else nothing
             }
             
             // remember user as last user in userDefaults
             Manager.sharedInstance.currentUser = user
             NSUserDefaults.standardUserDefaults().setObject(user!.id, forKey: userDefaults.LastUser.rawValue)
-        }
-    }
-    
-    func createNewUser() -> User? {
-        //1
-        let appDelegate =
-            UIApplication.sharedApplication().delegate as! AppDelegate
-        
-        let managedContext = appDelegate.managedObjectContext
-        
-        //2
-        let entity =  NSEntityDescription.entityForName("User",
-                                                        inManagedObjectContext:managedContext)
-        
-        let user = NSManagedObject(entity: entity!,
-                                   insertIntoManagedObjectContext: managedContext) as! User
-        
-        //3
-        user.id = NSUUID().UUIDString
-        user.name = textField.text
-        if let photo = imageView.image {
-            user.photo = UIImagePNGRepresentation(photo)
-        }
-        
-        //4
-        do {
-            try managedContext.save()
-            return user
-        } catch let error as NSError  {
-            print("Could not save \(error), \(error.userInfo)")
-            return nil
-        }
-    }
-    
-    func editExistingUser() -> User? {
-
-        // 1
-        existingUser?.name = textField.text
-        existingUser?.photo = UIImagePNGRepresentation(imageView.image!)
-        
-        // 2
-        do {
-            try existingUser?.managedObjectContext?.save()
-            return existingUser
-        } catch let error as NSError {
-            print("Could not save \(error), \(error.userInfo)")
-            return nil
         }
     }
     

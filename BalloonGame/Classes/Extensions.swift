@@ -14,6 +14,7 @@ extension Int {
         self+=1
     }
     
+    // including from and to numbers
     static func randomNumberBetween(from: Int, and to:Int) -> Int {
         return from + Int(arc4random_uniform(UInt32(to-from+1)))
     }
@@ -25,26 +26,12 @@ extension Bool {
     }
 }
 
-extension Character {
-    // TODO: - promeni
-    static func randomUppercaseLetter() -> Character {
-        let decValue = Int(arc4random_uniform(26)) + 65
-        return Character(UnicodeScalar(decValue))
-    }
-    // TODO: - promeni
-    static func randomLowercaseLetter() -> Character {
-        let decValue = Int(arc4random_uniform(26)) + 97
-        return Character(UnicodeScalar(decValue))
-    }
-    
-    // TODO: - promeni
-    static func randomLetter() -> Character {
-        let upperCase: Bool = Bool.random()
-        if upperCase {
-            return randomUppercaseLetter()
-        } else {
-            return randomLowercaseLetter()
-        }
+extension String {
+    static func randomLowercaseLetter() -> String {
+        let lettersPath = NSBundle.mainBundle().pathForResource("letters", ofType: "plist")
+        let alphabet = NSArray(contentsOfFile: lettersPath!) as! [String]
+        let randomIndex = Int.randomNumberBetween(0, and: alphabet.count-1)
+        return alphabet[randomIndex]
     }
 }
 
