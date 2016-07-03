@@ -47,7 +47,7 @@ class DailyStatisticsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        filteredAndSortedData = tableData
+        applyFilter(segmentFilter)
         applySort(segmentSort)
     }
     
